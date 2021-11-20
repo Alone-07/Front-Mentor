@@ -1,0 +1,148 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.5rem;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+p {
+  font-family: "Lexanda Deca", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container .card {
+  display: flex;
+  flex-flow: row wrap;
+  width: 86rem;
+  margin: 2rem;
+}
+.container .card .card-1, .container .card .card-2, .container .card .card-3 {
+  flex-basis: 33.333%;
+  padding: 4.5rem;
+}
+.container .card .card-1 h1, .container .card .card-2 h1, .container .card .card-3 h1 {
+  color: #f2f2f2;
+}
+.container .card .card-1 p, .container .card .card-2 p, .container .card .card-3 p {
+  line-height: 1.5;
+}
+.container .card .card-1 {
+  background: #e38826;
+  border-radius: 1rem 0 0 1rem;
+}
+.container .card .card-1 .button {
+  color: #e38826;
+}
+.container .card .card-2 {
+  background: #006970;
+}
+.container .card .card-2 .button {
+  color: #006970;
+}
+.container .card .card-3 {
+  background: #004241;
+  border-radius: 0 1rem 1rem 0;
+}
+.container .card .card-3 .button {
+  color: #004241;
+}
+.container .card .button {
+  display: inline-block;
+  background: #f2f2f2;
+  border-radius: 2.4rem;
+  padding: 1rem 0;
+  text-align: center;
+  width: 70%;
+  margin-top: 70%;
+}
+
+@media screen and (max-width: 670px) {
+  .container .card {
+    flex-direction: column;
+    width: 70%;
+    margin: 10%;
+  }
+  .container .card .card-1 {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .container .card .card-3 {
+    border-radius: 0 0 1rem 1rem;
+  }
+  .container .card .button {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 680px) and (max-width: 700px) {
+  .container .card {
+    margin: 2rem;
+  }
+  .container .card .button {
+    margin-top: 10%;
+  }
+
+  .m1 {
+    width: 8.333%;
+  }
+
+  .m2 {
+    width: 16.666%;
+  }
+
+  .m3 {
+    width: 24.999%;
+  }
+
+  .m4 {
+    width: 33.333%;
+  }
+
+  .m5 {
+    width: 41.666%;
+  }
+
+  .m6 {
+    width: 49.999%;
+  }
+
+  .m7 {
+    width: 58.333%;
+  }
+
+  .m8 {
+    width: 66.666%;
+  }
+
+  .m9 {
+    width: 74.999%;
+  }
+
+  .m10 {
+    width: 83.333%;
+  }
+
+  .m11 {
+    width: 91.666%;
+  }
+
+  .m12 {
+    width: 99.999%;
+  }
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */
