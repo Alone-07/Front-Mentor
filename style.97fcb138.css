@@ -43,6 +43,9 @@ h1, h2, h3, h4, h5, h6, p {
   flex-flow: column;
   justify-content: space-between;
   flex-basis: 66.666%;
+  background: url(/bg-pattern-quotation.3944c98d.svg) no-repeat;
+  background-position: 80% 0;
+  background-size: 28%;
   background-color: #7541c8;
   border-radius: 1.6rem;
   padding: 5rem;
