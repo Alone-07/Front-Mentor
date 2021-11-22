@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   font-size: 1.6rem;
   font-family: "Red Hat Display", sans-serif;
+  overflow-y: hidden;
 }
 
 .container {
