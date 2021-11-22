@@ -1,0 +1,207 @@
+*, *::before, *:after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  font-family: "Spartan", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 70%;
+}
+.container .top {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  color: #502050;
+  min-height: 45%;
+  margin-bottom: 5rem;
+}
+.container .top .top-left {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 40%;
+}
+.container .top .top-left h1 {
+  font-weight: bolder;
+  font-size: 5.5rem;
+  line-height: 1;
+}
+.container .top .top-left p {
+  margin-top: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.container .top .top-right {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+}
+.container .top .top-right .flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background: #f7f2f7;
+  border-radius: 0.7rem;
+  width: 90%;
+  height: 26%;
+}
+.container .top .top-right .flex .all-star {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.container .top .top-right .flex .all-star .star {
+  width: 15%;
+}
+.container .top .top-right .flex h5 {
+  width: 65%;
+}
+.container .top .top-right .start {
+  align-self: flex-start;
+}
+.container .top .top-right .middle {
+  align-self: center;
+}
+.container .top .top-right .end {
+  align-self: flex-end;
+}
+.container .bottom {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-height: 30rem;
+}
+.container .bottom .card {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  width: 31.333%;
+  min-height: 25rem;
+  background: #502050;
+  border-radius: 1rem;
+  padding: 1.6rem;
+}
+.container .bottom .card .profile {
+  display: flex;
+  align-items: center;
+}
+.container .bottom .card .profile .profile-img {
+  margin-right: 1.6rem;
+  text-align: center;
+}
+.container .bottom .card .profile .profile-img img {
+  display: inline-block;
+  border-radius: 50%;
+  width: 70%;
+}
+.container .bottom .card .profile .profile-name h5 {
+  color: #ee68a4;
+  font-weight: 400;
+}
+.container .bottom .card .profile .profile-name h4 {
+  color: white;
+  font-weight: 500;
+}
+.container .bottom .card .text {
+  color: white;
+  line-height: 1.5;
+}
+.container .bottom .start {
+  align-self: flex-start;
+}
+.container .bottom .middle {
+  align-self: center;
+}
+.container .bottom .end {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1151px) and (max-width: 1280px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .container {
+    width: 100%;
+    margin: 4rem;
+    align-items: center;
+  }
+  .container .top {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .container .top .top-left, .container .top .top-right {
+    width: 100%;
+  }
+  .container .top .top-left {
+    text-align: center;
+  }
+  .container .top .top-right .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1.6rem 0;
+  }
+  .container .top .top-right .flex .all-star, .container .top .top-right .flex h5 {
+    width: 100%;
+  }
+  .container .top .top-right .flex .all-star {
+    justify-content: center;
+  }
+  .container .top .top-right .flex .all-star .star {
+    width: 3rem;
+  }
+  .container .top .top-right h5 {
+    text-align: center;
+  }
+  .container .top .top-right .start, .container .top .top-right .middle, .container .top .top-right .end {
+    align-self: center;
+  }
+  .container .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .bottom .card {
+    width: 90%;
+    margin-bottom: 1.6rem;
+  }
+  .container .bottom .start {
+    align-self: center;
+  }
+  .container .bottom .middle {
+    align-self: center;
+  }
+  .container .bottom .end {
+    align-self: center;
+  }
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */
