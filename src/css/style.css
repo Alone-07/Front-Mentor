@@ -2,9 +2,14 @@
   box-sizing: border-box;
 }
 
+span {
+  display: inline-block;
+}
+
 body {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
@@ -40,26 +45,31 @@ body::after {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  width: 60%;
-  min-height: 70%;
+  max-width: 1200px;
+  width: 80%;
+  min-height: 600px;
 }
 .container .phone {
-  width: 35%;
-  height: 100%;
+  width: 39%;
   background: #fff;
   border-radius: 2rem;
   padding: 1rem;
   box-shadow: 6px 16px 26px 0 rgba(0, 0, 0, 0.15);
 }
 .container .phone .phone_screen {
+  display: flex;
+  flex-flow: column;
   border-radius: 30px;
   background: #f5f3f7;
+  margin: 0;
+  padding: 0;
 }
 .container .phone .phone_screen .chat_head {
   width: 100%;
+  height: 110px;
   display: flex;
-  align-items: center;
-  padding: 3.5rem 1rem 0 1rem;
+  align-items: flex-end;
+  padding: 1rem 1rem 1rem 1rem;
   border-radius: 30px 30px 10px 10px;
   color: #fff;
   background: linear-gradient(to left, #e942ff, #8838ff);
@@ -68,24 +78,30 @@ body::after {
 .container .phone .phone_screen .chat_head span:not(.dot) {
   margin-right: 10px;
 }
-.container .phone .phone_screen .chat_head .profile_image {
+.container .phone .phone_screen .chat_head .chat_head-total {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  align-items: center;
+}
+.container .phone .phone_screen .chat_head .chat_head-total .profile_image {
   border-radius: 50%;
   border: 2px solid #fff;
   width: 40px;
 }
-.container .phone .phone_screen .chat_head .profile_image img {
+.container .phone .phone_screen .chat_head .chat_head-total .profile_image img {
   border-radius: 50%;
-  width: 100%;
+  max-width: 100%;
 }
-.container .phone .phone_screen .chat_head .profile_details h5, .container .phone .phone_screen .chat_head .profile_details h3 {
+.container .phone .phone_screen .chat_head .chat_head-total .profile_details h5, .container .phone .phone_screen .chat_head .chat_head-total .profile_details h3 {
   margin: 0;
   padding: 0;
 }
-.container .phone .phone_screen .chat_head .profile_details h3 {
+.container .phone .phone_screen .chat_head .chat_head-total .profile_details h3 {
   font-weight: 500;
   color: #fff;
 }
-.container .phone .phone_screen .chat_head .profile_details h5 {
+.container .phone .phone_screen .chat_head .chat_head-total .profile_details h5 {
   font-weight: 400;
   color: #d89eff;
 }
@@ -110,15 +126,16 @@ body::after {
   flex-flow: column;
 }
 .container .phone .phone_screen .chat_body .left_side_chat {
-  width: 70%;
+  width: 60%;
   background: rgba(146, 65, 200, 0.095);
   color: #9241c8;
-  padding: 0.5rem;
+  padding: 0.75rem;
   margin-bottom: 1rem;
-  border-radius: 10px;
+  border-radius: 20px 20px 20px 5px;
 }
 .container .phone .phone_screen .chat_body .left_side_chat_3 {
   margin-top: 1rem;
+  width: 58%;
 }
 .container .phone .phone_screen .chat_body .right_side_image {
   align-items: flex-end;
@@ -126,7 +143,7 @@ body::after {
   flex-flow: row wrap;
   justify-content: space-around;
   align-self: flex-end;
-  width: 75%;
+  width: 70%;
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
@@ -136,27 +153,27 @@ body::after {
 }
 .container .phone .phone_screen .right_side_chat-1 {
   align-self: flex-end;
-  width: 70%;
-  padding: 0.5rem;
+  width: 60%;
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
-  border-radius: 15px;
   margin-bottom: 1rem;
   color: #6e5d7e;
+  border-radius: 15px 15px 5px 15px;
 }
 .container .phone .phone_screen .right_side_chat-2 {
   align-self: flex-end;
-  width: 45%;
+  width: 40%;
   padding: 0.7rem;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
-  border-radius: 15px;
+  border-radius: 10px 10px 5px 10px;
   margin-bottom: 1rem;
   color: #6e5d7e;
 }
 .container .phone .phone_screen .left_side_walked {
-  display: flex;
+  display: inline-flex;
   flex-flow: row wrap;
   align-items: center;
-  width: 85%;
+  width: 70%;
   background: linear-gradient(to right, #e942ff, #8838ff);
   padding: 1rem;
   margin-bottom: 1rem;
@@ -179,13 +196,14 @@ body::after {
 }
 .container .phone .phone_screen .chat_bottom {
   display: flex;
+  flex-flow: row;
   width: 100%;
   background: #fff;
   padding: 0.5rem;
   border-radius: 100px;
 }
 .container .phone .phone_screen .chat_bottom .chat_reply {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   flex-grow: 2;
   background: white;
@@ -193,7 +211,7 @@ body::after {
   margin: 0.5rem 0 0 2rem;
 }
 .container .phone .phone_screen .chat_bottom .send_button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 40px;
@@ -217,6 +235,24 @@ body::after {
   width: 77%;
   color: #a39daa;
   font-weight: 400;
+}
+
+@media screen and (max-width: 1391px) {
+  .container {
+    width: 90%;
+    flex-flow: column;
+    align-items: center;
+  }
+  .container .phone {
+    width: 100%;
+  }
+  .container .content {
+    width: 100%;
+    text-align: center;
+  }
+  .container .content .content_text {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

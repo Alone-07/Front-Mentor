@@ -2,9 +2,13 @@
     box-sizing: border-box;
 }
 // html {}
+span {
+    display: inline-block;
+}
 body {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
     min-height: 100vh;
     margin: 0;
     overflow-x: hidden;
@@ -38,29 +42,33 @@ body::after {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: 60%;
-    min-height: 70%;
-    // margin: 0 auto;
+    max-width: 1200px;
+    width: 80%;
+    min-height: 600px;
     // background: red;
 
     .phone{
-        width: 35%;
-        height: 100%;
+        width: 39%;
         background: #fff;
         border-radius: 2rem;
         padding: 1rem;
         box-shadow: 6px 16px 26px 0 rgba($color: #000000, $alpha: 0.15);
         .phone_screen {
+            display: flex;
+            flex-flow: column;
             border-radius: 30px;
             background: hsl(270, 20%, 96%);
+            margin: 0;
+            padding: 0;
 
             .chat_head {
                 width: 100%;
-                // height: 115px;
+                height: 110px;
                 display: flex;
-                align-items: center;
-                // overflow: hidden;
-                padding: 3.5rem 1rem 0 1rem;
+                align-items: flex-end;
+                // For padding
+                // padding: 3.5rem 1rem 0 1rem;  
+                padding: 1rem 1rem 1rem 1rem;
                 border-radius: 30px 30px 10px 10px;
                 color: #fff;
                 background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
@@ -69,34 +77,40 @@ body::after {
                span:not(.dot){
                 margin-right: 10px;
                 }
-                .profile_image {
-                    border-radius: 50%;
-                    border: 2px solid #fff;
-                    width: 40px;
-
-                    img {
+               .chat_head-total{ 
+                   display: flex;
+                   flex-flow: row;
+                   width: 100%;
+                   align-items: center;
+                    .profile_image {
                         border-radius: 50%;
-                        width: 100%;
-                    }
-                }
+                        border: 2px solid #fff;
+                        width: 40px;
 
-                .profile_details{
+                        img {
+                            border-radius: 50%;
+                            max-width: 100%;
+                        }
+                    }
 
-                    h5, h3 {
-                        margin: 0;
-                        padding: 0;
+                    .profile_details{
+
+                        h5, h3 {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        
+                        h3{
+                            font-weight: 500;
+                            color:  #fff;
+                        }
+                        h5 {
+                            font-weight: 400;
+                            color: hsl(276, 100%, 81%);
+                        }
                     }
-                    
-                    h3{
-                        font-weight: 500;
-                        color:  #fff;
-                    }
-                    h5 {
-                        font-weight: 400;
-                        color: hsl(276, 100%, 81%);
-                    }
-                  
-                }
+                 }
+
                 .dot{
                     margin-left: auto;
                 }
@@ -115,23 +129,23 @@ body::after {
                 }
             }
             .chat_body {
-                // width: 70%;
                 width: 100%;
-                // height: 50%;
+                // height: 590px;
                 padding: 1rem;
                 display: flex;
                 flex-flow: column;
                 
                 .left_side_chat {
-                    width: 70%;
+                    width: 60%;
                     background: rgba(146, 65, 200, 0.095);
                     color: hsl(276, 55%, 52%);
-                    padding: .5rem;
+                    padding: .75rem;
                     margin-bottom: 1rem;
-                    border-radius: 10px;
+                    border-radius: 20px 20px 20px 5px;
                 }
                 .left_side_chat_3{
                     margin-top: 1rem;
+                    width: 58%;
                 }
 
               .right_side_image{
@@ -140,7 +154,7 @@ body::after {
                   flex-flow: row wrap;
                   justify-content: space-around;
                   align-self: flex-end;
-                  width: 75%;
+                  width: 70%;
                   margin-bottom: 1rem;
                   margin-top: 1rem;
 
@@ -153,29 +167,29 @@ body::after {
             }
             .right_side_chat-1 {
                 align-self: flex-end;
-                width: 70%;
-                padding: .5rem;
+                width: 60%;
+                padding: .5rem .5rem .5rem .75rem;
                 box-shadow: 0 4px 16px 0 rgba($color: #000000, $alpha: 0.15);
-                border-radius: 15px;
                 margin-bottom: 1rem;
                 color: hsl(271, 15%, 43%);
+                border-radius: 15px 15px 5px 15px;
             }
             .right_side_chat-2 {
                 align-self: flex-end;
-                width: 45%;
+                width: 40%;
                 padding: .7rem;
                 box-shadow: 0 4px 16px 0 rgba($color: #000000, $alpha: 0.15);
-                border-radius: 15px;
+                border-radius: 10px 10px 5px 10px;
                 margin-bottom: 1rem;
                 color: hsl(271, 15%, 43%);
             }
 
             .left_side_walked {
-                display: flex;
+                display: inline-flex;
                 flex-flow: row wrap;
                 align-items: center;
                 // justify-content: space-evenly;
-                width: 85%;
+                width: 70%;
                 background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
                 padding: 1rem;
                 margin-bottom: 1rem;
@@ -197,16 +211,20 @@ body::after {
                     margin-right: .5rem;    
                 }
             }
+
+            // .chat_bottom {
+            //     border: 2px solid orange;
+            // }
             .chat_bottom {
-                // width: 10%;
                 display: flex;
+                flex-flow: row;
                 width: 100%;
                 background: #fff;
                 padding: .5rem;
                 border-radius: 100px;
                 
                 .chat_reply{
-                    display: flex;
+                    display: inline-flex;
                     align-items: center;
                     flex-grow: 2;
                     background: white;
@@ -215,7 +233,7 @@ body::after {
         
                 }
                 .send_button {
-                    display: flex;
+                    display: inline-flex;
                     justify-content: center;
                     align-items: center;
                     width: 40px;
@@ -234,21 +252,53 @@ body::after {
     }
     .content {
         align-self: center;
-    width: 50%;
-    line-height: 1.5;
+        width: 50%;
+        line-height: 1.5;
 
-    .content_heading {
-        color: hsl(271, 36%, 24%);
-        font: {
-            weight: 700;
+        .content_heading {
+            color: hsl(271, 36%, 24%);
+            font: {
+                weight: 700;
+            }
         }
-    }
-    .content_text{
-        width: 77%;
-        color: hsl(270, 7%, 64%);
-        font: {
-            weight: 400;
+        .content_text{
+            width: 77%;
+            color: hsl(270, 7%, 64%);
+            font: {
+                weight: 400;
+            }
         }
-    }
-    }
+      
+} 
+
 }
+
+
+ @media screen and (max-width: 1391px) {
+     .container {
+         width: 90%;
+         flex-flow: column;
+          align-items: center;
+
+           .phone{
+               width: 100%;
+            }
+
+           .content{
+             width: 100%;
+             text-align: center;
+
+             .content_text{
+               width: 100%;
+             }
+                }
+            }
+        }
+
+
+        // @media screen and (max-width: 550px) {
+            
+        //     .container{
+
+        //     }
+        // }
