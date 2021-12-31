@@ -237,14 +237,16 @@ body::after {
   font-weight: 400;
 }
 
-@media screen and (max-width: 1391px) {
+@media (max-width: 1391px) {
   .container {
     width: 90%;
     flex-flow: column;
+    justify-content: center;
     align-items: center;
   }
   .container .phone {
     width: 100%;
+    margin-bottom: 4rem;
   }
   .container .content {
     width: 100%;

@@ -274,14 +274,16 @@ body::after {
 }
 
 
- @media screen and (max-width: 1391px) {
+ @media (max-width: 1391px) {
      .container {
          width: 90%;
          flex-flow: column;
+         justify-content: center;
           align-items: center;
 
            .phone{
                width: 100%;
+               margin-bottom: 4rem;
             }
 
            .content{
