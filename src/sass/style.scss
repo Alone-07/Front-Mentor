@@ -276,18 +276,19 @@ body::after {
 
  @media (max-width: 1391px) {
      .container {
-         width: 90%;
+         width: 100%;
          flex-flow: column;
          justify-content: center;
           align-items: center;
+          padding: 5rem 0;
 
            .phone{
-               width: 100%;
+               width: 90%;
                margin-bottom: 4rem;
             }
 
            .content{
-             width: 100%;
+             width: 90%;
              text-align: center;
 
              .content_text{
