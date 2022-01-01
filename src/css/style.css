@@ -285,6 +285,9 @@ main {
   .container .phone .phone_screen .chat_body .left_side_walked {
     width: 90%;
   }
+  .container .phone .phone_screen .chat_body .right_side_image {
+    width: 80%;
+  }
   .container .phone .phone_screen .chat_body .left_side_chat_3 {
     width: 75%;
   }
