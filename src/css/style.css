@@ -41,16 +41,18 @@ body::after {
   opacity: 0.05;
 }
 
+main {
+  width: 1200px;
+}
+
 .container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  max-width: 1200px;
-  width: 80%;
-  min-height: 600px;
+  align-items: center;
 }
 .container .phone {
-  width: 39%;
+  width: 38%;
   background: #fff;
   border-radius: 2rem;
   padding: 1rem;

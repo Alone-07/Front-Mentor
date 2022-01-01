@@ -38,17 +38,22 @@ body::after {
     z-index: -1;
     opacity: 0.05;
 }
+
+main{
+    width: 1200px;
+    // height: 700px;
+    // border: 2px solid red;
+}
 .container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    max-width: 1200px;
-    width: 80%;
-    min-height: 600px;
+    align-items: center;
+
     // background: red;
 
     .phone{
-        width: 39%;
+        width: 38%;
         background: #fff;
         border-radius: 2rem;
         padding: 1rem;
