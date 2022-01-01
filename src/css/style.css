@@ -42,7 +42,7 @@ body::after {
 }
 
 main {
-  width: 1200px;
+  width: min(1200px, 85%);
 }
 
 .container {
@@ -113,7 +113,7 @@ main {
 .container .phone .phone_screen .chat_head::before {
   content: "";
   position: absolute;
-  top: -20%;
+  top: -15px;
   left: 50%;
   transform: translate(-50%, 0);
   width: 60%;
@@ -239,24 +239,57 @@ main {
   font-weight: 400;
 }
 
-@media (max-width: 1391px) {
+@media (min-width: 955px) and (max-width: 1291px) {
   .container {
-    width: 100%;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
     padding: 5rem 0;
   }
   .container .phone {
-    width: 90%;
+    width: 46%;
     margin-bottom: 4rem;
   }
   .container .content {
-    width: 90%;
+    width: 46%;
+  }
+  .container .content .content_text {
+    width: 100%;
+  }
+}
+@media (min-width: 665px) and (max-width: 955px) {
+  .container {
+    flex-flow: column;
+    padding: 5rem 0;
+  }
+  .container .phone {
+    width: 70%;
+    margin-bottom: 4rem;
+  }
+  .container .content {
+    width: 70%;
     text-align: center;
   }
   .container .content .content_text {
     width: 100%;
+  }
+}
+@media (max-width: 665px) {
+  .container {
+    flex-flow: column;
+    padding: 5rem 0;
+  }
+  .container .phone {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .container .content {
+    width: 100%;
+    text-align: center;
+  }
+  .container .content .content_heading {
+    text-align: center;
+  }
+  .container .content .content_text {
+    width: 100%;
+    text-align: center;
   }
 }
 

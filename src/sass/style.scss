@@ -40,7 +40,7 @@ body::after {
 }
 
 main{
-    width: 1200px;
+   width: min(1200px, 85%)
     // height: 700px;
     // border: 2px solid red;
 }
@@ -58,6 +58,7 @@ main{
         border-radius: 2rem;
         padding: 1rem;
         box-shadow: 6px 16px 26px 0 rgba($color: #000000, $alpha: 0.15);
+
         .phone_screen {
             display: flex;
             flex-flow: column;
@@ -124,7 +125,7 @@ main{
                 &::before {
                     content: "";
                     position: absolute;
-                    top: -20%;
+                    top: -15px;
                     left: 50%;
                     transform: translate(-50%, 0);
                     width: 60%;
@@ -279,22 +280,23 @@ main{
 }
 
 
- @media (max-width: 1391px) {
+ @media (min-width: 955px) and (max-width: 1291px) {
+
      .container {
-         width: 100%;
-         flex-flow: column;
-         justify-content: center;
-          align-items: center;
+        
           padding: 5rem 0;
 
            .phone{
-               width: 90%;
+               width: 46%;
                margin-bottom: 4rem;
             }
 
            .content{
-             width: 90%;
-             text-align: center;
+             width: 46%;
+             
+            //  .content_heading{
+            //      text-align: center;
+            //  }
 
              .content_text{
                width: 100%;
@@ -303,10 +305,56 @@ main{
             }
         }
 
+@media (min-width: 665px) and (max-width: 955px){
+    .container {
+        flex-flow: column;
+        padding: 5rem 0;
 
-        // @media screen and (max-width: 550px) {
-            
-        //     .container{
+         .phone{
+             width: 70%;
+             margin-bottom: 4rem;
+          }
 
-        //     }
-        // }
+         .content{
+           width: 70%;
+           text-align: center;
+         
+           
+        //    .content_heading{
+        //        text-align: center;
+        //    }
+
+           .content_text{
+             width: 100%;
+       
+           }
+              }
+          }
+}
+
+@media (max-width: 665px){
+    .container {
+        flex-flow: column;
+        padding: 5rem 0;
+
+         .phone{
+             width: 100%;
+             margin-bottom: 4rem;
+          }
+
+         .content{
+           width: 100%;
+           text-align: center;
+           
+           .content_heading{
+               text-align: center;
+           }
+
+           .content_text{
+             width: 100%;
+          text-align: center;
+           }
+              }
+          }
+
+}
