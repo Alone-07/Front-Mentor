@@ -335,6 +335,8 @@ main{
 @media (max-width: 665px){
     .container {
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
         padding: 5rem 0;
 
          .phone{
