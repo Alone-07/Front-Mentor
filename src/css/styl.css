@@ -61,6 +61,11 @@ h4 {
   opacity: 0.5;
 }
 
+.profile_box.white .text_part .text {
+  color: #48556a;
+  opacity: 0.7;
+}
+
 .black {
   background: #19212e;
   color: white;
@@ -82,7 +87,7 @@ h4 {
 
 .container {
   width: 95%;
-  max-width: 1350px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -119,7 +124,7 @@ h4 {
 .profile_box .text_part .text {
   line-height: 1.5;
   color: #cfcfcf;
-  opacity: 0.7;
+  opacity: 70%;
   font-weight: 500;
 }
 
