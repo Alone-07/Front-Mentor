@@ -10,7 +10,7 @@
   .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 50%);
+    grid-template-rows: repeat(8, max-content);
   }
 
   .violet {
