@@ -77,7 +77,7 @@ h4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 30px;
+  gap: 20px 25px;
 }
 
 .long {
@@ -87,7 +87,7 @@ h4 {
 
 .container {
   width: 95%;
-  max-width: 1150px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
