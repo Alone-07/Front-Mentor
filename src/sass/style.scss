@@ -117,3 +117,26 @@ h3 {
   //   text-align: center;
   padding: 1rem;
 }
+
+@media (max-width: 750px) {
+  .gallery {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .image {
+      width: 100%;
+    }
+  }
+
+  .hero {
+    .hero_head {
+      font-size: 28px;
+    }
+    .hero_text {
+      font-size: 22px;
+      line-height: 1.5;
+    }
+  }
+}
