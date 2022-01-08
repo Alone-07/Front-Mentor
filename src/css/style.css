@@ -122,6 +122,9 @@ h3 {
     width: 100%;
   }
 
+  .hero {
+    background-position: center;
+  }
   .hero .hero_head {
     font-size: 28px;
   }
