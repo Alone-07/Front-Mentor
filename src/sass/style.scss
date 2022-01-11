@@ -72,7 +72,7 @@ h3 {
   .hero_text {
     transition: 0.3s ease;
     font: {
-      font-family: verdana, sans-serif;
+      family: verdana, sans-serif;
       size: 36px;
     }
 
@@ -108,7 +108,8 @@ h3 {
       height: 100%;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 1;
     }
   }
