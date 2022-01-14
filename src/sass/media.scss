@@ -1,0 +1,56 @@
+$very-dark-blue: hsl(229, 57%, 11%);
+@media screen and (min-width: 850px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/images/bg-desktop.png) no-repeat fixed;
+    background-size: contain;
+    background-position: bottom;
+    background-color: $very-dark-blue;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 850px;
+    height: 0%;
+    margin: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-end;
+    justify-content: center;
+    // background: red;
+    padding: 0;
+
+    .img_part {
+      width: 350px;
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+    .storage_part {
+      width: 550px;
+      padding: 1.5rem 2.5rem 0rem 2.5rem;
+
+      .message_bar {
+        top: -30%;
+        left: 50%;
+        transform: translate(0, 0);
+        width: 200px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          border-width: 20px;
+          border-style: solid;
+          border-color: transparent #fff transparent transparent;
+          top: 70%;
+          right: 0;
+        }
+      }
+
+      .storage_bar {
+        width: 100%;
+      }
+    }
+  }
+}

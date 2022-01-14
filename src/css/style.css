@@ -1,0 +1,153 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url(/images/bg-mobile.png) no-repeat fixed;
+  background-size: cover;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: min(90%, 450px);
+  margin: 0 auto;
+  height: 90vh;
+}
+.container .img_part {
+  width: 100%;
+  height: 200px;
+  background: #1d2c67;
+  border-radius: 10px 100px 10px 10px;
+  margin-bottom: 1rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-flow: column;
+}
+.container .img_part .logo_part {
+  margin-bottom: 2rem;
+}
+.container .img_part span {
+  display: inline-block;
+}
+.container .img_part .accessories_part {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .img_part .accessories_part span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background: #0c122c;
+  border-radius: 20%;
+  padding: 0.5rem;
+  margin-right: 1.2rem;
+}
+.container .img_part .accessories_part span img {
+  max-width: 100%;
+}
+.container .storage_part {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background: #1d2c67;
+  border-radius: 10px;
+  padding: 1rem 2.5rem 1rem 2.5rem;
+  position: relative;
+}
+.container .storage_part .message {
+  width: 100%;
+  font-weight: 400;
+}
+.container .storage_part .message .message_changed {
+  font-weight: 700;
+}
+.container .storage_part .storage_bar {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 110%;
+  height: 20px;
+  border-radius: 100px;
+  padding: 3px;
+  background: #0c122c;
+  position: relative;
+}
+.container .storage_part .storage_bar:before {
+  content: "0 GB";
+  position: absolute;
+  color: #fff;
+  top: 150%;
+  left: 0;
+}
+.container .storage_part .storage_bar:after {
+  content: "1000 GB";
+  position: absolute;
+  color: #fff;
+  top: 150%;
+  right: 0;
+}
+.container .storage_part .storage_bar .inner_storage_bar {
+  display: inline-block;
+  position: relative;
+  width: 75%;
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+}
+.container .storage_part .storage_bar .inner_storage_bar:after {
+  content: "";
+  position: absolute;
+  right: 1%;
+  top: 10.9%;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff;
+}
+.container .storage_part .message_bar {
+  width: 55%;
+  max-width: 250px;
+  height: 70px;
+  border-radius: 10px;
+  margin: 0 auto;
+  color: #000;
+  text-align: center;
+  background: #fff;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.container .storage_part .message_bar .message_bar_head {
+  font-size: 38px;
+  color: #0c122c;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.container .storage_part .message_bar .message_bar_text {
+  color: #848794;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */
