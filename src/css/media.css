@@ -7,12 +7,24 @@
 
   main {
     margin: 0;
+    background: red;
+  }
+
+  .body {
+    background: orange;
+  }
+
+  .intro {
+    background: yellow;
+  }
+
+  .section {
+    background-color: blue;
   }
 
   .intro,
 .body {
     width: min(1100px, 80%);
-    margin: 0 auto;
   }
 
   .intro {
@@ -20,7 +32,7 @@
   }
 
   .intro .head {
-    width: 50%;
+    width: 45%;
     margin: 0 auto;
   }
 
