@@ -1,0 +1,100 @@
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$darkblue: hsl(234, 12%, 34%);
+$gray: hsl(229, 6%, 66%);
+$lightgray: hsl(0, 0%, 98%);
+$tiny: 200;
+$medium: 400;
+$large: 600;
+$font: "Poppins", sans-serif;
+
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+p {
+  font-size: 15px;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: $lightgray;
+  font: {
+    family: $font;
+  }
+}
+main {
+  margin: 5rem 0;
+}
+.intro,
+.body {
+  width: min(410px, 85%);
+  margin: 0 auto;
+}
+.intro {
+  margin-bottom: 5rem;
+}
+.intro .head {
+  text-align: center;
+  &_light {
+    color: $gray;
+    font-weight: $tiny;
+  }
+  &_dark {
+    color: $darkblue;
+    font-weight: $large;
+  }
+  &_text {
+    color: $gray;
+    font-weight: $medium;
+  }
+}
+.contentbox.cyan {
+  border-top: 4px solid $cyan;
+}
+.contentbox.red {
+  border-top: 4px solid $red;
+}
+.contentbox.orange {
+  border-top: 4px solid $orange;
+}
+.contentbox.blue {
+  border-top: 4px solid $blue;
+}
+.body .section {
+  .contentbox {
+    background: #fff;
+    border-radius: 7px;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 4px 12px 0px rgba($color: $blue, $alpha: 0.2),
+      0px 6px 12px 0px rgba($color: $darkblue, $alpha: 0.2);
+
+    &_head {
+      color: $darkblue;
+      font-weight: $large;
+    }
+    &_text {
+      color: $gray;
+      font-weight: $medium;
+      font-size: 13px;
+      margin-top: 2px;
+      margin-bottom: 2rem;
+    }
+
+    &_img {
+      display: flex;
+      flex-flow: row;
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+}

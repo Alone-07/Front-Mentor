@@ -1,0 +1,44 @@
+@media screen and (min-width: 1134px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    margin: 0;
+  }
+  .intro,
+  .body {
+    width: min(1100px, 80%);
+    margin: 0 auto;
+  }
+  .intro {
+    margin-bottom: 3rem;
+  }
+  .intro .head {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .body {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    .section + .section {
+      margin-left: 1.5rem;
+    }
+    .section {
+      width: 33.333%;
+    }
+    .section.one .contentbox {
+      &_text {
+        margin-bottom: 3rem;
+      }
+    }
+    .section.one,
+    .section.three {
+      align-self: center;
+    }
+  }
+}
