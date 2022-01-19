@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="index.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="img_part">
+        <div class="img">
+          <img src="/images/bg-pattern-mobile.svg" alt="mobile">
+      </section>
+      <section class="faq_part">
+        <div class="inner_faq_part">
+          <!---inner part-->
+          <h1 class="head">FAQ</h1>
+          <div class="section" onclick="myToggle1()">
+            <!--section 1-->
+            <div class="text">
+              <p class="text_show_part" id="show1">How many team members can I invite?</p>
+              <p class="text_hide_part " id="open1">
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </div>
+            <span class="toggle " 
+              ><img src="/images/icon-arrow-down.svg" alt="arrow" id="one"
+            /></span>
+          </div>
+          <div class="section" onclick="myToggle2()">
+            <div class="text">
+              <p class="text_show_part" id="show2">
+                What is the maximum file upload size?
+              </p>
+              <p class="text_hide_part" id="open2">
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </div>
+            <span class="toggle two" 
+              ><img src="/images/icon-arrow-down.svg" alt="arrow" id="two"
+            /></span>
+          </div>
+          <div class="section" onclick="myToggle3()">
+            <div class="text">
+              <p class="text_show_part" id="show3">How do I reset my password?</p>
+              <p class="text_hide_part" id="open3">
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </div>
+            <span class="toggle three" 
+              ><img src="/images/icon-arrow-down.svg" alt="arrow" id="three"
+            /></span>
+          </div>
+          <div class="section" onclick="myToggle4()">
+            <div class="text">
+              <p class="text_show_part" id="show4">Can I cancel my subscription?</p>
+              <p class="text_hide_part " id="open4">
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </div>
+            <span class="toggle four" 
+              ><img src="/images/icon-arrow-down.svg" alt="arrow" id="four"
+            /></span>
+          </div>
+          <div class="section"  onclick="myToggle5()">
+            <div class="text">
+              <p class="text_show_part" id="show5">Do you provide additional support?</p>
+              <p class="text_hide_part" id="open5">
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </p>
+            </div>
+            <span class="toggle  five"
+              ><img src="/images/icon-arrow-down.svg" alt="arrow" id="five"
+            /></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>

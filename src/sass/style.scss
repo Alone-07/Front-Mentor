@@ -1,0 +1,134 @@
+$darkblue: hsl(238, 29%, 16%);
+$red: hsl(14, 88%, 65%);
+// Gradient:-
+$violet: hsl(273, 75%, 66%);
+$blue: hsl(240, 73%, 65%);
+// text
+$gray-blue: hsl(237, 12%, 33%);
+$dark-gray-blue: hsl(240, 6%, 50%);
+$light-gray-blue: hsl(240, 5%, 91%);
+
+$normal: 400;
+$large: 700;
+$font: "Kumbh Sans", sans-serif;
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+p {
+  font-size: 12px;
+}
+span {
+  display: inline-block;
+}
+body {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  font-family: $font;
+  font-size: 16px;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(to left bottom, $violet, $blue);
+}
+main {
+  background: $light-gray-blue;
+  width: min(550px, 90%);
+  margin: 5rem 0;
+  border-radius: 25px;
+}
+.img_part {
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+  .img {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+
+    &:before {
+      content: url(/images/illustration-woman-online-mobile.svg);
+      position: absolute;
+      width: 250px;
+      height: 100%;
+      bottom: 115%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.faq_part {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+
+  .inner_faq_part {
+    .head {
+      font-size: 36px;
+      font-weight: $large;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .section {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+
+    .text {
+      margin-right: 1rem;
+      &_show_part {
+        font-size: 14px;
+        color: $gray-blue;
+        font-weight: $normal;
+
+        &:hover {
+          color: $red;
+        }
+      }
+      &_hide_part {
+        color: $dark-gray-blue;
+        display: none;
+        animation: anime 0.5s normal;
+      }
+
+      @keyframes anime {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    .toggle {
+      height: 10px;
+      margin-top: 10px;
+      margin-left: auto;
+      transition: 0.3s ease;
+      position: relative;
+
+      img {
+        transition: 0.3s ease;
+      }
+    }
+  }
+}
