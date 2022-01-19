@@ -10,18 +10,6 @@
     background: red;
   }
 
-  .body {
-    background: orange;
-  }
-
-  .intro {
-    background: yellow;
-  }
-
-  .section {
-    background-color: blue;
-  }
-
   .intro,
 .body {
     width: min(1100px, 80%);
