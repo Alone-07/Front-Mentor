@@ -1,0 +1,24 @@
+@media (min-width: 834px) {
+  main {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img_part .img {
+    width: 350px;
+  }
+  .img_part .imgbefore {
+    content: url(/images/illustration-woman-online-desktop.svg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .faq_part {
+    width: 350px;
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */

@@ -34,7 +34,7 @@ body {
 
 main {
   background: #e7e7e9;
-  width: min(550px, 90%);
+  width: min(750px, 90%);
   margin: 5rem 0;
   border-radius: 25px;
 }
