@@ -1,0 +1,14 @@
+@use "./mobile";
+@use "./desktop";
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
