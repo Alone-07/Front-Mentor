@@ -9,8 +9,9 @@ shareIcon.addEventListener('click', () => {
         hideShare.style.opacity = 1;
     } else {
         hideShare.style.opacity = 0;
-    }
 
+    }
 })
+
 
 // 'hsl(217, 19%, 35%)';
