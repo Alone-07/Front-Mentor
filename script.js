@@ -7,6 +7,7 @@ shareIcon.addEventListener('click', () => {
 
     if (hideShare.style.opacity == 0) {
         hideShare.style.opacity = 1;
+
     } else {
         hideShare.style.opacity = 0;
 
