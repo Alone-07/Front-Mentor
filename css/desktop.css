@@ -1,0 +1,64 @@
+@media screen and (min-width: 834px) {
+  .wrapper {
+    width: 770px;
+    flex-flow: row;
+    justify-content: center;
+  }
+  .wrapper .image_part {
+    width: 100%;
+    height: 300px;
+  }
+  .wrapper .image_part .image_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper .image_part .image_container img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+  .wrapper .text_part {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 0 10px 10px 0;
+  }
+  .wrapper .text_part #toggle:hover {
+    background: white;
+  }
+  .wrapper .text_part #toggle:hover .hiding_share {
+    opacity: 0;
+  }
+  .wrapper .text_part .profile {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding: 0;
+  }
+  .wrapper .text_part .profile .displaying_profile .hiding_share {
+    width: 230px;
+    top: -145%;
+    left: 140%;
+    justify-content: space-evenly;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+  .wrapper .text_part .profile .displaying_profile .hiding_share:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    border: 10px solid red;
+    border-color: #48556a transparent transparent transparent;
+  }
+  .wrapper .text_part .profile .displaying_profile .hiding_share .share_icon {
+    margin-left: 0;
+  }
+  .wrapper .text_part .profile .displaying_profile .hiding_share .share_icon span {
+    font-size: 22px;
+    margin-left: 0;
+  }
+  .wrapper .text_part .profile .displaying_profile .hiding_share .share_icon span + span {
+    margin-left: 0.7rem;
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */

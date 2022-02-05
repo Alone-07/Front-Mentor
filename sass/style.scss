@@ -1,0 +1,206 @@
+
+$veryDarkGrayBlue: hsl(217, 19%, 35%);
+$lightGrayBlue: hsl(210, 46%, 95%);
+$grayBlue: hsl(212, 23%, 69%);
+$desaturatedDarkBlue: hsl(214, 17%, 51%);
+$medium: 500;
+$large: 700;
+*,*:before,*:after{
+    box-sizing: border-box;
+    // background: #48556a;
+}
+h1,h2,h3{
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $lightGrayBlue;
+}
+.wrapper{
+    width: min(380px, 90%);
+    display: flex;
+    flex-flow: column;
+    background: #fff;
+    border-radius: 10px;
+
+    .image_part{
+        width: 100%;
+        height: 250px;
+        .image_container{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px 10px 0 0 ; 
+    
+            img{
+                max-width: 100%;
+                // height: 100%; 
+              border-radius: 10px 10px 0 0 ; 
+            }
+        }
+    }
+
+    .text_part{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 0 0 0;
+        background: #fff;
+        border-radius: 0 0 10px 10px;
+        
+        .container{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%
+        }
+        .intro,.text,.profile{
+            width: 83%;
+            // margin-bottom: 1rem;
+        }
+        .intro{
+            margin-top: .5rem;
+            font-weight: $large;
+            color: $veryDarkGrayBlue;
+            font-size: 20px;
+            line-height: 1.5;
+
+        }
+        .text{
+            font-weight: $medium;
+            color: $desaturatedDarkBlue;
+            text-align: left;
+            line-height: 1.5;
+            font-size: 14px;    
+        }
+        #toggle{
+            margin-top: .3rem;
+            border-radius: 0 0 10px 10px;
+            background: #fff;
+
+            &:hover .hiding_share{
+                opacity: 1;
+            }
+
+            &:hover{
+                background:  $veryDarkGrayBlue;
+            }
+        }
+        .profile{
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: .5rem 0;
+            // margin-top: 1.5rem; 
+
+            .displaying_profile {
+                display: flex;
+                flex-flow: row;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                margin-bottom: .5rem;
+                .profile_img{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    margin-right: 1rem;
+
+                    img{
+                        max-width: 100%;
+                    border-radius: 50%;
+  
+                    }
+                }
+                .profile_text{
+                    p{
+                        margin: 0;
+                    }
+                    .name{
+                        margin-bottom: 3px;
+                        font-weight: $large;
+                        color: $veryDarkGrayBlue
+                    }
+                    .dob{
+                        font-weight: $medium;
+                        color: $grayBlue;
+                    }
+                }
+
+                .hiding_share{
+                    display: flex;
+                    justify-content:flex-start;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $veryDarkGrayBlue;
+                    opacity: 0;
+
+                    &_text{
+                        letter-spacing: 5px;
+                        font-size: 13px;
+                        font-weight: $medium;
+                        color: $desaturatedDarkBlue;
+                    }
+                    .share_icon{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: auto;
+                        cursor: pointer;
+                        
+                        span{
+                            font-size: 24px;
+                            color: $lightGrayBlue;
+                            margin-left: 1rem;
+
+                        }
+                    }
+                }
+
+            }
+            .share{
+                margin-left: auto;
+                background: $lightGrayBlue;
+                // background: hsl(210, 46%, 95%);
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                border-radius: 50%;
+                cursor: pointer;
+            } 
+
+            // .share:hover .hiding_share{
+            //     opacity: 1;
+            // }
+            
+        }
+    }
+}
+
+
+@keyframes slide {
+    0%{
+        width: 0%;
+        right: 100%;
+        left: -3px;
+        opacity: 0;
+    }
+    100%{
+        width: 100%;    
+        left: 0;
+        transition: .3s ease;
+        opacity: 1;
+    }
+}

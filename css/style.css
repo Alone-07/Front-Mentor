@@ -1,0 +1,176 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ecf2f8;
+}
+
+.wrapper {
+  width: min(380px, 90%);
+  display: flex;
+  flex-flow: column;
+  background: #fff;
+  border-radius: 10px;
+}
+.wrapper .image_part {
+  width: 100%;
+  height: 250px;
+}
+.wrapper .image_part .image_container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.wrapper .image_part .image_container img {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.wrapper .text_part {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0 0 0;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+}
+.wrapper .text_part .container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.wrapper .text_part .intro, .wrapper .text_part .text, .wrapper .text_part .profile {
+  width: 83%;
+}
+.wrapper .text_part .intro {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  color: #48556a;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.wrapper .text_part .text {
+  font-weight: 500;
+  color: #6d7f97;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.wrapper .text_part #toggle {
+  margin-top: 0.3rem;
+  border-radius: 0 0 10px 10px;
+  background: #fff;
+}
+.wrapper .text_part #toggle:hover .hiding_share {
+  opacity: 1;
+}
+.wrapper .text_part #toggle:hover {
+  background: #48556a;
+}
+.wrapper .text_part .profile {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.wrapper .text_part .profile .displaying_profile {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.wrapper .text_part .profile .displaying_profile .profile_img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.wrapper .text_part .profile .displaying_profile .profile_img img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+.wrapper .text_part .profile .displaying_profile .profile_text p {
+  margin: 0;
+}
+.wrapper .text_part .profile .displaying_profile .profile_text .name {
+  margin-bottom: 3px;
+  font-weight: 700;
+  color: #48556a;
+}
+.wrapper .text_part .profile .displaying_profile .profile_text .dob {
+  font-weight: 500;
+  color: #9eafc2;
+}
+.wrapper .text_part .profile .displaying_profile .hiding_share {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #48556a;
+  opacity: 0;
+}
+.wrapper .text_part .profile .displaying_profile .hiding_share_text {
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6d7f97;
+}
+.wrapper .text_part .profile .displaying_profile .hiding_share .share_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+}
+.wrapper .text_part .profile .displaying_profile .hiding_share .share_icon span {
+  font-size: 24px;
+  color: #ecf2f8;
+  margin-left: 1rem;
+}
+.wrapper .text_part .profile .share {
+  margin-left: auto;
+  background: #ecf2f8;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@keyframes slide {
+  0% {
+    width: 0%;
+    right: 100%;
+    left: -3px;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+    transition: 0.3s ease;
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
