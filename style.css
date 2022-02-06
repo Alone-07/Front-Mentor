@@ -2,6 +2,7 @@ body {
   color: #000;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x:  hidden;
 }
 a,
 span {
@@ -86,4 +87,23 @@ a {
 
 .para .answer {
   display: none;
+}
+
+.new{
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 2px solid cadetblue;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new .new_text{
+  font-size: 3rem;
+  transition: .3s ease;
+}
+
+.new_text:hover{
+  transform: scale(1.1);
 }

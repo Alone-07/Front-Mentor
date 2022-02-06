@@ -202,3 +202,20 @@ function myFun(array, number) {
 }
 
 console.log(screen.availWidth);
+
+const newContainer = document.querySelector('.new_text');
+const myScreen = () => {
+  let customerScreen = screen.width;
+  if (customerScreen < 950) {
+    console.log(customerScreen)
+    return newContainer.style.color = 'red';
+  }
+  else {
+    console.log(customerScreen)
+    return newContainer.style.color = 'cayn';
+  }
+  return document.body.backgroundColor = 'orange';
+}
+
+newContainer.addEventListener('click', myScreen);
+// console.log(newContainer)  
