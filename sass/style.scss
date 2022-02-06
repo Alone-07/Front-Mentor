@@ -79,19 +79,19 @@ body{
             line-height: 1.5;
             font-size: 14px;    
         }
-        #toggle{
-            margin-top: .3rem;
-            border-radius: 0 0 10px 10px;
-            background: #fff;
+        // #toggle{
+        //     margin-top: .3rem;
+        //     border-radius: 0 0 10px 10px;
+        //     background: #fff;
 
-            &:hover .hiding_share{
-                opacity: 1;
-            }
+        //     &:hover .hiding_share{
+        //         opacity: 1;
+        //     }
 
-             &:hover, &:focus-visible{
-                background:  $veryDarkGrayBlue;
-            }
-        }
+        //      &:hover, &:focus-visible{
+        //         background:  $veryDarkGrayBlue;
+        //     }
+        // }
         .profile{
             display: flex;
             flex-flow: row;

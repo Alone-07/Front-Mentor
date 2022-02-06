@@ -69,17 +69,6 @@ body {
   line-height: 1.5;
   font-size: 14px;
 }
-.wrapper .text_part #toggle {
-  margin-top: 0.3rem;
-  border-radius: 0 0 10px 10px;
-  background: #fff;
-}
-.wrapper .text_part #toggle:hover .hiding_share {
-  opacity: 1;
-}
-.wrapper .text_part #toggle:hover, .wrapper .text_part #toggle:focus-visible {
-  background: #48556a;
-}
 .wrapper .text_part .profile {
   display: flex;
   flex-flow: row;
