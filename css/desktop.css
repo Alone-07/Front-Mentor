@@ -1,0 +1,51 @@
+@media screen and (min-width: 834px) {
+  main {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  main .desktop_image {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    background: transparent;
+  }
+  main .desktop_image img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+  main .wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+  main .wrapper #header {
+    margin-top: 6rem;
+    margin-bottom: 7.5rem;
+  }
+  main .wrapper .container {
+    width: 60%;
+  }
+  main .wrapper .content .image {
+    display: none;
+  }
+  main .wrapper .content .textPart {
+    text-align: left;
+  }
+  main .wrapper .content .textPart .heading, main .wrapper .content .textPart .textPart_text {
+    text-align: left;
+  }
+  main .wrapper .content .textPart .heading {
+    font-size: 3rem;
+  }
+  main .wrapper .content .textPart .email {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */
