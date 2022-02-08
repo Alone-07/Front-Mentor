@@ -22,6 +22,18 @@
             }
         }
         .hero{
+            display: flex;
+            flex-flow: column;
+            padding: 0;
+            padding-top: 1.5rem;
+
+            header{
+                align-self: center;
+                width: 90%;
+                .logo{
+                    width: 200px;
+                }
+            }
             #intro{
                 display: flex;
                 flex-flow: row;
