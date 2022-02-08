@@ -1,0 +1,76 @@
+@media screen and (min-width: 834px) {
+    
+    main{
+        #two{
+            .text_part{
+                order: 2;
+            }
+        }
+        .container{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+             
+           
+            .text_part{
+               text-align: left;
+            }
+            .img_part{
+                order: 1;
+            }
+        }
+        .hero{
+            #intro{
+                display: flex;
+                flex-flow: row;
+                justify-content: space-between;
+                width: 95%;
+                .text_part{
+                    text-align: left;
+                    margin-right: 1.5rem;
+                 }
+                 .img_part{
+                     margin-left: auto;
+                     order: 1;
+                 }
+            }
+        }
+    }
+
+    
+footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    .footer_logo{
+        width: 90%;
+        margin-bottom: 2.5rem;
+    }    
+    
+        .wrapper{
+            width: 90%;
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-self: center;
+    
+            .contact_info{
+                width: 36.33%;
+            }
+           .links{
+              width: 30.33%;
+              flex-flow: row;
+              justify-content: space-around;
+              margin-left: auto;
+            }   
+            .socialMedia{
+                width:25%;
+                margin-left: auto;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+        }
+    }
+}

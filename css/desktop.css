@@ -1,0 +1,66 @@
+@media screen and (min-width: 834px) {
+  main #two .text_part {
+    order: 2;
+  }
+  main .container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  main .container .text_part {
+    text-align: left;
+  }
+  main .container .img_part {
+    order: 1;
+  }
+  main .hero #intro {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+  main .hero #intro .text_part {
+    text-align: left;
+    margin-right: 1.5rem;
+  }
+  main .hero #intro .img_part {
+    margin-left: auto;
+    order: 1;
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  footer .footer_logo {
+    width: 90%;
+    margin-bottom: 2.5rem;
+  }
+  footer .wrapper {
+    width: 90%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-self: center;
+  }
+  footer .wrapper .contact_info {
+    width: 36.33%;
+  }
+  footer .wrapper .links {
+    width: 30.33%;
+    flex-flow: row;
+    justify-content: space-around;
+    margin-left: auto;
+  }
+  footer .wrapper .socialMedia {
+    width: 25%;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */
