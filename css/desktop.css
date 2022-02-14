@@ -1,0 +1,44 @@
+@media screen and (min-width: 734px) {
+  .logo {
+    margin-bottom: 4rem;
+    padding: 0;
+  }
+
+  .calc-container {
+    flex-flow: row;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 10px;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+  .calc-container .input {
+    width: 45%;
+    margin-bottom: 0;
+  }
+  .calc-container .input .tip .btn {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .calc-container .output {
+    width: 45%;
+  }
+  .calc-container .output .wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  .calc-container .output .wrapper .amount {
+    margin-top: 1rem;
+  }
+  .calc-container .output .wrapper .amount .text .ft {
+    font-size: 13px;
+  }
+  .calc-container .output .wrapper .amount .text .sd {
+    font-size: 12px;
+  }
+  .calc-container .output .reset {
+    margin-top: auto;
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */
