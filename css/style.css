@@ -1,0 +1,160 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-size: 15px;
+  background: url(/images/bg-bottom.svg) no-repeat, url(/images/bg-top.svg) no-repeat;
+  background-position: left bottom, right top;
+  background-color: #f6f6fe;
+}
+
+span {
+  display: inline-block;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  display: block;
+  border: none;
+  outline: none;
+}
+
+main {
+  width: min(90%, 500px);
+  margin: 0 auto;
+}
+
+.intro {
+  color: #6d708d;
+  margin-bottom: 5rem;
+}
+.intro .head {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+.intro .toggleContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: min(295px, 70%);
+  margin: 0 auto;
+}
+.intro .toggleContainerText {
+  font-weight: 400;
+  color: #b3b5c6;
+  font-size: 12px;
+}
+.intro .toggleContainer .toggle {
+  width: 50px;
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 100px;
+  padding: 3px;
+  transition: 0.3s ease;
+}
+.intro .toggleContainer .toggle .toggler {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f6f6fe;
+  transition: 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  background: #fff;
+  color: #6d708d;
+  padding: 1.7rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.125);
+}
+.container .hide {
+  display: none;
+}
+.container .heading {
+  width: 100%;
+  color: #6d708d;
+  text-align: center;
+}
+.container .dollars, .container .dollars .money .symbol {
+  font-size: 52px;
+  font-weight: 700;
+  color: #494c5f;
+  margin-bottom: 1.5rem;
+}
+.container .dollars .money, .container .dollars .money .symbol .money {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+.container .dollars .money .symbol {
+  font-size: 28px;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+.container .includes {
+  margin-bottom: 1.5rem;
+  color: #6d708d;
+  font-weight: normal;
+}
+.container .includes .features {
+  border-bottom: 1px solid #b3b5c6;
+  padding: 1rem;
+}
+.container .includes .features:first-child {
+  border-top: 1px solid #b3b5c6;
+}
+.container .learn {
+  width: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: #f6f6fe;
+  padding: 0.8rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transform: 0.3s ease;
+}
+.container .learn:hover, .container .learn:focus {
+  background: white;
+  border-color: #696fdd;
+  color: #696fdd;
+}
+
+#middle {
+  background: linear-gradient(to bottom right, #a3a8f0 25%, #696fdd);
+}
+#middle .heading, #middle .dollars, .container .dollars .money #middle .symbol, #middle .money, #middle .money .symbol, #middle .includes {
+  color: #fff;
+}
+#middle .learn {
+  color: #a3a8f0;
+  background: #fff;
+  font-weight: 700;
+}
+#middle .learn:hover, #middle .learn:focus {
+  background: #696fdd;
+  border-color: #fff;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

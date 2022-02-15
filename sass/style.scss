@@ -1,0 +1,162 @@
+@use './utilites' as *;
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 15px;
+    background: url(/images/bg-bottom.svg) no-repeat, url(/images/bg-top.svg) no-repeat;
+    background-position: left bottom, right top;
+    background-color: $Very_Light_Grayish_Blue;
+}
+span{
+    display: inline-block;
+}
+p {
+    margin: 0;
+}
+a {
+    display: block; 
+    text-decoration: none;
+    color: #000;
+}
+button {
+    display: block;
+    border: none;
+    outline: none;
+}
+main{
+    width: min(90%, 500px);
+    margin: 0 auto;
+}
+.intro {
+    color: $Grayish_Blue;
+    margin-bottom: 5rem;
+
+    .head{
+        width: 100%;
+        text-align: center;
+        font-weight: $large;
+    }
+    .toggleContainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: min(295px, 70%);
+        margin: 0 auto;
+
+        &Text{
+            font-weight: 400;
+            color: $Light_Grayish_Blue;
+            font-size: 12px;
+        }
+
+        .toggle{
+            width:50px;
+            background: linear-gradient(to right, $grad1, $grad2);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-radius: 100px;
+            padding: 3px;
+            transition: .3s ease;
+
+            .toggler{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: $Very_Light_Grayish_Blue;
+            transition: .3s ease;
+            }
+        }
+    }
+}
+
+.container{
+    width: 100%;
+    background: #fff;
+    color: $Grayish_Blue;
+    padding: 1.7rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px 0px rgba($color: #000000, $alpha: .125);
+    .hide{
+        display: none;
+    }
+    .heading{
+        width: 100%;
+        color: $Grayish_Blue;
+        text-align: center;
+    }
+    .dollars{
+        font-size: 52px;
+        font-weight: $large;
+        color: $Dark_Grayish_Blue;
+        margin-bottom: 1.5rem;
+
+        .money{
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .money .symbol{
+            @extend .dollars;
+            font-size: 28px;
+            align-self: center;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .includes{
+        margin-bottom: 1.5rem;
+        color: $Grayish_Blue;
+        font-weight: normal;
+        .features{
+            border-bottom: 1px solid $Light_Grayish_Blue;
+            padding: 1rem;
+        }
+        .features:first-child{
+            border-top: 1px solid $Light_Grayish_Blue;
+        }
+    }
+    .learn {
+        width: 100%;
+        border-radius: 10px;
+        background: linear-gradient(to right, $grad1, $grad2);
+        color: $Very_Light_Grayish_Blue;
+        padding: .8rem;
+        font-weight: $large;
+        border: 1px solid transparent;
+        transform: .3s ease;
+
+        &:hover, &:focus{
+            background: white;
+            border-color: $grad2;
+            color: $grad2;
+        }
+    }
+    
+}
+
+#middle {
+    background: linear-gradient(to bottom right, $grad1 25%, $grad2);
+
+   .heading, .dollars, .money, .money .symbol, .includes{
+       color: #fff;
+   }
+    .learn{
+        color: $grad1;
+        background: #fff;
+        font-weight: $large;
+
+        &:hover, &:focus{
+            background: $grad2;
+            border-color: #fff;
+            color: #fff;
+        }
+    }
+}

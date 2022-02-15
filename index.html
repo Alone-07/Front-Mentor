@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/desktop.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <main>
+    <section class="intro">
+      <h2 class="head">Our Pricing</h2>
+      <div class="toggleContainer">
+        <span class="toggleContainerText">Annually</span>
+        <p class="toggle"><span class="toggler"></span></p>
+        <span class="toggleContainerText">Monthly</span>
+      </div>
+    </section>
+    <section class="wrapper">
+      <div class="container">
+        <h3 class="heading">Basic</h3>
+        <div class="dollars">
+          <div class="show">
+            <p class="money"><span class="symbol">&dollar;</span>19.99</p>
+          </div>
+          <div class="hide">
+            <p class="money"><span class="symbol">&dollar;</span>199.99</p>
+          </div>
+        </div>
+        <div class="includes">
+          <p class="features">500 GB Storage</p>
+          <p class="features">2 Users Allowed</p>
+          <p class="features"> Send up to 3 GB</p>
+        </div>
+        <a rel="link" href="#" class="learn" title="Lear More">LEARN MORE</a>
+      </div>
+      <div class="container" id="middle">
+        <h3 class="heading">Professional</h3>
+        <div class="dollars">
+          <div class="show">
+            <p class="money"><span class="symbol">&dollar;</span>24.99</p>
+          </div>
+          <div class="hide">
+            <p class="money"><span class="symbol">&dollar;</span>249.99</p>
+          </div>
+        </div>
+        <div class="includes">
+          <p class="features">1 TB Storage</p>
+          <p class="features">5 Users Allowed</p>
+          <p class="features">Send up to 10 GB</p>
+        </div>
+        <a href="#" class="learn" title="Lear More">LEARN MORE</a>
+      </div>
+      <div class="container">
+        <h3 class="heading"> Master</h3>
+        <div class="dollars">
+          <div class="show">
+            <p class="money"><span class="symbol">&dollar;</span>39.99</p>
+          </div>
+          <div class="hide">
+            <p class="money"><span class="symbol">&dollar;</span>399.99</p>
+          </div>
+        </div>
+        <div class="includes">
+          <p class="features">2 TB Storage</p>
+          <p class="features">10 Users Allowed</p>
+          <p class="features">Send up to 20 GB</p>
+        </div>
+        <a rel="link" href="#" class="learn" title="Lear More">LEARN MORE</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>. -->
+  <!-- </div> -->
+</body>
+
+<script>
+  const toggle = document.querySelector('.toggle');
+  const toggler = document.querySelector('.toggler');
+  const show = document.querySelectorAll('.show');
+  const hide = document.querySelectorAll('.hide');
+  toggle.style.justifyContent = 'flex-end';
+
+  toggle.addEventListener('click', () => {
+
+    if (toggle.style.justifyContent == 'flex-end') {
+      toggle.style.justifyContent = 'flex-start';
+      show.forEach(price => price.style.display = 'none');
+      hide.forEach(price => price.style.display = 'block');
+      return console.log('changed to annually');
+    }
+    toggle.style.justifyContent = 'flex-end';
+    hide.forEach(price => price.style.display = 'none');
+    show.forEach(price => price.style.display = 'block');
+    return console.log('changed to monthly')
+
+  })
+</script>
+
+</html>

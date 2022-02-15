@@ -1,0 +1,33 @@
+@media screen and (min-width: 1054px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        width: min(95%, 1150px);
+    }
+    .intro{
+        margin-bottom: 3rem;
+
+        .head{
+            margin-bottom: 2rem;
+        }
+    }
+    .wrapper{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+
+       .container{
+           width: 33.333%; 
+           align-self: center;
+           margin-bottom: 0 ;
+       }
+       #middle{
+         padding: 3rem 1.7rem;
+       }
+    }
+}
