@@ -8,17 +8,19 @@
     .container {
         width: min(1120px, 95%);
         margin-bottom: 0;
+        margin-top: 0;
     }
     header {
         flex-flow: row;
         justify-content: space-between;
 
         .title {
-            flex: 8 !important;
+            width: 40% !important;
             border: none;
         }
         .toggle_container {
-            flex: 1!important;
+            width: 25% !important;
+            justify-content: space-evenly;
             margin-left: auto;
         }
     }
@@ -28,7 +30,7 @@
         flex-flow: row;
         justify-content: flex-start;
         align-items: stretch;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
 
         .gradient + .gradient {
             margin-left: 2rem;

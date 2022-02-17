@@ -332,6 +332,7 @@ main .overview_wrapper .overview_container .overview_box .countdownIn_percentage
   .container {
     width: min(1120px, 95%);
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   header {
@@ -339,11 +340,12 @@ main .overview_wrapper .overview_container .overview_box .countdownIn_percentage
     justify-content: space-between;
   }
   header .title {
-    flex: 8 !important;
+    width: 40% !important;
     border: none;
   }
   header .toggle_container {
-    flex: 1 !important;
+    width: 25% !important;
+    justify-content: space-evenly;
     margin-left: auto;
   }
 
@@ -352,7 +354,7 @@ main .overview_wrapper .overview_container .overview_box .countdownIn_percentage
     flex-flow: row;
     justify-content: flex-start;
     align-items: stretch;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   main .social_media_wrapper .gradient + .gradient {
     margin-left: 2rem;
