@@ -213,6 +213,7 @@ main .overview_wrapper_heading {
   margin-bottom: 1rem;
   font-weight: 700;
   color: #63687e;
+  font-size: 24px;
 }
 main .overview_wrapper .overview_container {
   width: 100%;
