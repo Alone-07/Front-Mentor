@@ -1,0 +1,78 @@
+@use './utlities' as *;
+.dark {
+
+    .title {
+       border-color: $Desaturated_Blue-Text;
+
+       &_heading{
+           color: $White-Text;
+        }
+       &_text{
+           color: $Desaturated_Blue-Text;
+        }
+       
+    }
+    .toggle_container{
+        .toggle {
+            background: linear-gradient(to right , $toggle_grad1, $toggle_grad2);
+        }
+       .toggle .toggler{
+           background: $Dark_Desaturated_Blue-Car_BG;
+        }
+       .mode{
+           color: $Desaturated_Blue-Text;
+        }
+    }
+
+   .gradient .social_container{
+       background:$Dark_Desaturated_Blue-Car_BG;
+
+       &:hover {
+             background: $Very_Dark_Blue_Top-BG_Pattern;
+        }
+       .platform {
+           &_owner {
+               color: $Desaturated_Blue-Text;
+            }
+        } 
+       .followers {
+
+            &In_number {
+                color: $White-Text;
+            }
+            &In_text {
+                color: $Desaturated_Blue-Text;
+            }
+        }
+       .today:first-child {
+           
+            &In_text{
+                color: $White-Text;
+            }
+        }
+    }
+    .overview_wrapper_heading{
+        color: $White-Text;
+    } 
+        
+      .overview_container  .overview_box {
+            background: $Dark_Desaturated_Blue-Car_BG !important;
+
+        &:hover {
+              background: $Very_Dark_Blue_Top-BG_Pattern !important;
+            }            
+             .section {
+
+                 &_text {
+                     color: $Desaturated_Blue-Text !important;
+                }
+            }
+      .countdown {
+
+                &In_number {
+                    color: $White-Text !important;
+                }
+            }
+        }
+}
+
