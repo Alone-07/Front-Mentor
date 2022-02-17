@@ -329,7 +329,7 @@ main .overview_wrapper .overview_container .overview_box .countdownIn_percentage
   }
 
   .container {
-    width: min(1220px, 95%);
+    width: min(1120px, 95%);
     margin-bottom: 0;
   }
 
