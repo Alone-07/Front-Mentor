@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <style>
+        :root {
+            --bg: #eee;
+            --cr: #323437;
+            --bg-d: var(--cr);
+            --cr-d: var(--bg);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--cr);
+        }
+
+        .darkTheme {
+            --bg: var(--bg-d);
+            --cr: var(--cr-d);
+        }
+
+        .btn {
+            padding: .5rem 1rem;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+    <title>Numbers</title>
+</head>
+
+<body class="">
+    <button class="btn" type="button" data-toggle="light">Toggle</button>
+</body>
+
+</html>
