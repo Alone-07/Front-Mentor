@@ -280,12 +280,13 @@ header {
         text-align: center;
         padding: .4rem;
         &_head {
-            font-size: 36px;
+            font-size: 64px;
             font-weight: $large;
             color: $White;
         }
         &_text {
             font-weight: $medium;
+            color: $White;
         }
 
         .getStarted {
@@ -312,7 +313,7 @@ header {
    
 }
 
-@media screen  and (min-width: 1034px){
+@media screen  and (min-width: 1100px){
     header {
         background: url(/images/bg-pattern-intro-desktop.svg) no-repeat,  linear-gradient(to   right , $Very_light_red, $Light_red);
         background-position: 25% 50%;

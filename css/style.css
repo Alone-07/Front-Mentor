@@ -256,12 +256,13 @@ header .intro {
   padding: 0.4rem;
 }
 header .intro_head {
-  font-size: 36px;
+  font-size: 64px;
   font-weight: 700;
   color: white;
 }
 header .intro_text {
   font-weight: 600;
+  color: white;
 }
 header .intro .getStarted .free {
   margin-right: 1rem;
@@ -276,7 +277,7 @@ header .intro .getStarted .learn:hover, header .intro .getStarted .learn:focus {
   color: #ff3d54;
 }
 
-@media screen and (min-width: 1034px) {
+@media screen and (min-width: 1100px) {
   header {
     background: url(/images/bg-pattern-intro-desktop.svg) no-repeat, linear-gradient(to right, #ff8f70, #ff3d54);
     background-position: 25% 50%;
