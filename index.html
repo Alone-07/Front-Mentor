@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+  </style>
+  <script src="./script.js" defer></script>
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+
+  <header>
+    <section class="links row ">
+      <span class="logo"><img src="/images/logo.svg" alt="logo"></span>
+      <!--For Desktop-->
+      <nav class="primary_nav_container">
+        <ul class="primary_nav_ul">
+          <!--Link 1-->
+          <li class="primary_dropDown_links">
+            <a href="javascript: void(0)" title="drowpDownlink">Product</a>
+            <span class="dropDown_img"><img src="/images/icon-arrow-light.svg" alt="icon-arrow-light"></span>
+            <div class="dropDownContent">
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Overview</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Pricing</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Marketplace</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Features</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Integrations</a>
+            </div>
+          </li>
+          <!--link 2-->
+          <li class="primary_dropDown_links">
+            <a href="javascript: void(0)" title="drowpDownlink">Company</a>
+            <span class="dropDown_img"><img src="/images/icon-arrow-light.svg" alt="icon-arrow-light"></span>
+            <div class="dropDownContent">
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">About</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Team</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Blog</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Careers</a>
+            </div>
+          </li>
+          <!--link 3-->
+          <li class="primary_dropDown_links">
+            <a href="javascript: void(0)" title="drowpDownlink">Connect</a>
+            <span class="dropDown_img"><img src="/images/icon-arrow-light.svg" alt="icon-arrow-light"></span>
+            <div class="dropDownContent">
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Contact</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Newsletter</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">LinkedIn</a>
+            </div>
+          </li>
+        </ul>
+        <!---Login button and signup button-->
+        <div class="login_container">
+          <a href="javascript: void(0)" class="login" title="login">Login</a>
+          <a href="javascript: void(0)" title="signup" class="signup">Sign Up</a>
+        </div>
+      </nav>
+      <!--Hamburger-->
+      <span class="hamburger" data-hamburger=""><img src="/images/icon-hamburger.svg" alt="icon-hamburger"></span>
+      <!--Close-->
+      <span class="close" data-close=""><img src="/images/icon-close.svg" alt="icon-close"></span>
+
+      <!--For mobile-->
+      <nav class="secondary_nav_container row" data-mobile-nav="">
+        <ul class="secondary_nav_ul">
+          <!--Link 1-->
+          <li class="secondary_dropDown_links">
+            <a href="#" title="drowpDownlink" data-dropdown="one">Product
+              <span class="dropDown_img"><img src="/images/icon-arrow-dark.svg" alt="icon-arrow-dark"></span>
+            </a>
+
+            <div class="dropDownContent " id="one">
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Overview</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Pricing</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Marketplace</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Features</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Integrations</a>
+            </div>
+          </li>
+          <!--link 2-->
+          <li class="secondary_dropDown_links">
+            <a href="javascript: void(0)" title="drowpDownlink" data-dropdown="two">Company
+              <span class="dropDown_img"><img src="/images/icon-arrow-dark.svg" alt="icon-arrow-dark"></span>
+            </a>
+
+            <div class="dropDownContent " id="two">
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">About</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Team</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Blog</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Careers</a>
+            </div>
+          </li>
+          <!--link 3-->
+          <li class="secondary_dropDown_links">
+            <a href="javascript: void(0)" title="drowpDownlink" data-dropdown="three">Connect
+              <span class="dropDown_img"><img src="/images/icon-arrow-dark.svg" alt="icon-arrow-dark"></span>
+            </a>
+
+            <div class="dropDownContent" id="three">
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Contact</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">Newsletter</a>
+              <a href="javascript: void(0)" class="dropDownContent_links" title="dropDownContent_links">LinkedIn</a>
+            </div>
+          </li>
+        </ul>
+        <div class="login_container">
+          <a href="javascript: void(0)" class="login" title="login">Login</a>
+          <a href="javascript: void(0)" title="signup" class="signup">Sign Up</a>
+        </div>
+      </nav>
+    </section>
+    <!---intro-->
+    <section class="intro row">
+      <h1 class="intro_head">A modern publishing platform</h1>
+      <p class="intro_text"> Grow your audience and build your online brand</p>
+      <p class="getStarted">
+        <a href="#" class="free" title="start for free">Start for Free</a>
+        <a href="#" class="learn" title="learn more">Learn More</a>
+      </p>
+    </section>
+  </header>
+  <main>
+
+    <h2 class="Heading">Designed for the future</h2>
+
+    <section class="container" id="first">
+      <div class="image_part">
+        <span class="container_img_mobile"><img src="/images/illustration-editor-mobile.svg"
+            alt="mobile-editor-img"></span>
+        <span class="container_img_desktop"><img src="/images/illustration-editor-desktop.svg"
+            alt="desktop-editor-img"></span>
+      </div>
+      <div class="text_part">
+        <h2 class="container_head">Introducing an extensible editor</h2>
+        <p class="container_text">Blogr features an exceedingly intuitive interface which lets you focus on one thing:
+          creating content.
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+          change the looks of a blog.</p>
+        <h2 class="container_head">Robust content management</h2>
+        <p class="container_text">Flexible content management enables users to easily move through posts. Increase the
+          usability of your blog
+          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+        </p>
+      </div>
+    </section>
+    <!--Middle-->
+    <section class="container " id="middle">
+      <div class="image_part">
+        <span class="container_img_mobile"><img src="/images/illustration-phones.svg" alt="mobile-phone-img"></span>
+        <span class="container_img_desktop"><img src="/images/illustration-phones.svg" alt="desktop-phone-img"></span>
+      </div>
+      <div class="text_part">
+        <h2 class="container_head">State of the Art Infrastructure</h2>
+        <p class="container_text">
+          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
+      </div>
+    </section>
+    <section class="container" id="last">
+      <div class="image_part">
+        <span class="container_img_mobile"><img src="/images/illustration-laptop-mobile.svg"
+            alt="mobile-laptop-img"></span>
+        <span class="container_img_desktop"><img src="/images/illustration-laptop-desktop.svg"
+            alt="desktop-laptop-img"></span>
+      </div>
+      <div class="text_part">
+        <h2 class="container_head">Free, open, simple</h2>
+        <p class="container_text">
+          Blogr is a free and open source application backed by a large community of helpful
+          developers. It supports
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+        <h2 class="container_head">Powerful tooling</h2>
+        <p class="container_text">Batteries included. We built a simple and straightforward CLI tool that makes
+          customization and deployment a breeze,
+          but
+          capable of producing even the most complicated sites.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span class="footer_logo"><img src="/images/logo.svg" alt="footer_logo"></span>
+    <div class="footerContainer">
+      <p class="footerHead">Product</p>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">Overview</a>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">Pricing</a>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">Marketplace</a>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">Features</a>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">Integrations</a>
+    </div>
+    <div class="footerContainer">
+      <p class="footerHead">Company</p>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">About</a>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">Team</a>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">Blog</a>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">Careers</a>
+    </div>
+    <div class="footerContainer">
+      <p class="footerHead"> Connect</p>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">Contact</a>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">Newsletter</a>
+      <a href="javascript: void(0);" class="footerLinks" title="footer Links">LinkedIn </a>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+@use '../utilites' as *;
+
+ .Heading {
+    color: $Very_dark_blue;
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+main .container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    width: min(1460px, 100%);
+    // overflow: hidden;
+    &_head {
+        width: 70%;
+        margin: 0 auto;
+        color: $Very_dark_blue;
+    }
+    &_text{
+        font-weight: $medium1;
+        margin-bottom: 2rem;
+    }
+  
+    .image_part {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        span {
+            display: block;
+        }
+        .container_img_desktop {
+            display: none;
+        }
+    }
+    .text_part {
+        padding: 0 .5rem;
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+#middle {
+    position: relative;
+    background-image: url(/images/bg-pattern-circles.svg), linear-gradient(to bottom , $Very_dark_gray_blue, $Very_dark_desaturated_blue);
+    background-size: 400px, 100%;
+    background-repeat: no-repeat;
+    background-position: 50% -100px, 100%;
+    background-origin: padding-box;
+    padding: 11rem 0 5rem 0;
+    margin-top: 15rem;
+    border-radius: 0px 70px 0 70px;
+    color: $White;
+
+    .image_part .container_img_mobile {
+        position: absolute;
+        top: -185px;
+        width: min(375px, 100%);
+    }
+
+    .container_head{
+        color: $White; 
+    }
+    .text_part{
+        
+        .container_head{
+            font-size: 36px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    main{
+        overflow:  hidden;
+        padding: 2rem 0 4rem 0;
+    }
+    .Heading {
+        font-size: 36px;
+        margin-bottom: 5rem;
+    }
+   main .container{
+        flex-flow: row;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        margin-bottom: 3rem;
+        
+        &_head {
+            width: 100%;
+        }
+        .image_part{
+            width: 45%;
+
+            .container_img_desktop{
+                display: block;
+            }
+            .container_img_mobile{
+                display: none;
+            }
+        }
+        .text_part{
+            width: min(500px, 90%);
+            text-align: left;
+        }
+    }
+    #first {
+        position: relative;
+        .image_part {
+            order: 2;
+            .container_img_desktop{
+                position: absolute;  
+                width:680px; 
+                // width: 45%;
+                height: 100%;
+                top: 7%;
+                right: -13%;
+                // object-fit: cover;
+                // aspect-ratio: 1;
+                transform: translate(0, -50%);
+            }
+        }
+        .text_part{
+            order: 1;
+        }
+    }
+
+    #middle {
+        align-self: center;
+        padding: 5rem 0rem 3.5rem 0rem;
+        margin-top: 12rem;
+        background-size: 50%, 100%;
+        background-position: -20% 80%, 100%;
+        border-radius: 0px 70px 0 70px;
+        .image_part {
+            .container_img_desktop{
+                position: absolute;
+                width: 420px;
+                top: -60px;
+            }      
+        }
+        .text_part {
+            // width: 50%;
+           .container_head{
+               font-size: 34px;
+               width: 100%;
+           }
+        }
+    }
+    #last {
+        position: relative;
+        margin-top: 14rem;
+        .image_part {
+
+            .container_img_desktop{
+                position: absolute;
+                width: 680px;  
+                // width: 45%;
+                height: 100%;
+                top: 7%;
+                left: -13%;
+                // object-fit: cover;
+                // aspect-ratio: 1;
+                transform: translate(0, -50%);
+            }
+        }
+       
+    }
+}

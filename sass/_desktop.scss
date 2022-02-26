@@ -1,0 +1,114 @@
+@use './utilites' as *;
+
+// @media screen  and (min-width: 1004px){
+
+//     // header
+//     header {
+//         background: url(/images/bg-pattern-intro-desktop.svg) no-repeat,  linear-gradient(to   right , $Very_light_red, $Light_red);
+//         background-position: 25% 50%;
+//     }
+//    header  .links {
+//         .hamburger, .close {
+//             display: none;
+//         }
+
+//         .primary_nav_container {
+//             display: flex;
+//         }
+//         .secondary_nav_container {
+//             display: none;
+//         }   
+//     }
+//     // main
+//     main{
+//         overflow:  hidden;
+//         padding: 2rem 0 4rem 0;
+//     }
+//     .Heading {
+//         font-size: 36px;
+//         margin-bottom: 5rem;
+//     }
+//    main .container{
+//         flex-flow: row;
+//         align-items: center;
+//         justify-content: flex-start;
+//         text-align: left;
+//         margin-bottom: 3rem;
+        
+//         &_head {
+//             width: 100%;
+//         }
+//         .image_part{
+//             width: 45%;
+
+//             .container_img_desktop{
+//                 display: block;
+//             }
+//             .container_img_mobile{
+//                 display: none;
+//             }
+//         }
+//         .text_part{
+//             width: min(500px, 90%);
+//             text-align: left;
+//         }
+//     }
+//     #first {
+//         position: relative;
+//         .image_part {
+//             order: 2;
+//             .container_img_desktop{
+//                 position: absolute;  
+//                 width:680px; 
+//                 // width: 45%;
+//                 height: 100%;
+//                 top: 7%;
+//                 right: -195px;
+//                 // object-fit: cover;
+//                 // aspect-ratio: 1;
+//                 transform: translate(0, -50%);
+//             }
+//         }
+//         .text_part{
+//             order: 1;
+//         }
+//     }
+
+//     #middle {
+//         align-self: center;
+//         padding: 5rem 0rem 3.5rem 0rem;
+//         margin-top: 12rem;
+//         background-size: 50%, 100%;
+//         background-position: -20% 80%, 100%;
+//         border-radius: 0px 70px 0 70px;
+//         .image_part {
+//             .container_img_desktop{
+//                 position: absolute;
+//                 width: 420px;
+//                 top: -60px;
+//             }      
+//         }
+//         // .text_part {
+           
+//         // }
+//     }
+//     #last {
+//         position: relative;
+//         margin-top: 14rem;
+//         .image_part {
+
+//             .container_img_desktop{
+//                 position: absolute;
+//                 width: 680px;  
+//                 // width: 45%;
+//                 height: 100%;
+//                 top: 7%;
+//                 left: -195px;
+//                 // object-fit: cover;
+//                 // aspect-ratio: 1;
+//                 transform: translate(0, -50%);
+//             }
+//         }
+       
+//     }
+// }

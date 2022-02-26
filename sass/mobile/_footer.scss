@@ -1,0 +1,71 @@
+@use '../utilites' as *;
+
+
+footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 100px 0 0;
+    background: $Very_dark_black_blue;
+    color: $Grayish_blue;  
+    padding: 5rem 0 3rem 0; 
+
+    & > span, & > div{
+        width: 100%;
+    }
+
+    .footer_logo {
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerContainer {
+        @extend footer;
+        padding: 0;
+        margin-bottom: 2rem;
+
+        .footerHead {
+            color: $White;
+            font-weight: $medium;
+            margin-bottom: 1.5rem;
+        }
+        .footerLinks {
+            font-weight: $medium1;
+
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+        }
+        .footerLinks + .footerLinks {
+            margin-top: .5rem;
+        }
+    }
+}
+
+@media screen  and (min-width: 768px){
+    footer {
+        flex-flow: row;
+        align-items: flex-start;
+        padding: 3rem 0 2rem 0;
+
+        & > span, & > div{
+            flex: 1;
+        }
+
+        .footerContainer{
+            flex-flow: column;
+            justify-content: flex-start;
+            padding: 0rem;
+
+            .footerHead {
+                margin-bottom: 2.3rem;
+            }
+
+            .footerLinks + .footerLinks {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
