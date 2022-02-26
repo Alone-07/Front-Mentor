@@ -1,0 +1,156 @@
+@use './utilities' as *;
+
+*,*:before, *:after {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: var(--ff);
+    background: var(--main-bg);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button, span {
+    display: inline-block;
+}
+main {
+    width: min(405px, 90%);
+    margin: 2rem auto;
+
+    .top {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2.3rem;
+        color: var(--clr-sec);
+
+        .name {
+            font-size: var(--fs-l);
+            font-weight: var(--fw);
+            color: var(--clr-sec);
+        }
+        .theme {
+            margin-left: auto;
+            margin-right: 1.3rem;
+            font-size: 14px;
+            align-self: flex-end;
+            margin-bottom: 3px;
+            color: var(--clr-sec);
+        }
+        .toggle_container{
+            display: flex;
+            flex-flow: column;
+            width: min(75px, 100%);     
+
+            .number_container{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-bottom: 2px;
+                span {
+                    font-size: 12px;
+                    color: var(--clr-sec);
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                span + span {
+                    margin-left: var(--mn-s);
+                    
+                }
+            }
+            .toggle {
+                background: var(--toggle-n-keypad-bg);
+                padding: 5px;
+                border-radius: 100px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                .toggler {
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 100px;
+                    background: var(--eq-key-n-toggler-bg);
+                }
+            }
+        }
+    }
+
+    .screen {
+        border-radius: 10px;
+        background: var(--screen-bg);
+        padding: 1.7rem;
+        margin-bottom: 1.5rem;
+
+        &_text{
+            font-size: var(--fs-m);
+            text-align: right;
+            width: 100%;
+            color: var(--clr-sec);
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+    }
+    
+    .keypad {
+        display: grid;
+        grid-template-columns: repeat(4, 21%);
+        -ms-grid-columns: repeat(4, 21%);
+        grid-template-rows: repeat(5, 1fr);
+        -ms-grid-rows: repeat(5, 1fr);
+        grid-gap: 1rem;
+        padding: 1.5rem;
+        background: var(--toggle-n-keypad-bg);
+        border-radius: 10px;
+
+        & button {
+            padding: .8rem 0rem;
+            font-family: var(--ff);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // outline: none;
+            border: none;
+
+            &:hover, &:focus {
+                transform: scale(0.95);
+                box-shadow: none;
+            }
+        }
+        .numbers {
+            background: var(--key-bg);
+            font-size: var(--fs-m);
+            box-shadow: 0px 4px 0px 0px var(--key-shadow);
+            color: var(--clr-pri);          
+        }
+        .delete {
+            background: var(--del-key-bg);
+            color: var(--clr-sec);
+            box-shadow: 0px 4px 0px 0px var(--del-key-shadow);
+            font-size: 18px;
+        }
+        .reset {
+            grid-column: 1 / span 2;
+            background: var(--del-key-bg);
+            color: var(--clr-sec);
+            box-shadow: 0px 4px 0px 0px var(--del-key-shadow);
+            font-size: 18px;
+        }
+        .equal {
+            grid-column: 3 / span 2;
+            background: var(--eq-key-n-toggler-bg);
+            box-shadow: 0px 4px 0px 0px var(--eq-key-shadow);
+            color: var(--eq-key-clr);
+            font-size: 18px;
+        }
+    }
+}
