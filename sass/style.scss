@@ -80,6 +80,8 @@ main {
                     height: 17px;
                     border-radius: 100px;
                     background: var(--eq-key-n-toggler-bg);
+                    transition: .3s ease;
+
                 }
             }
         }
@@ -121,6 +123,7 @@ main {
             align-items: center;
             // outline: none;
             border: none;
+            transition: .3s ease;
 
             &:hover, &:focus {
                 transform: scale(0.95);
