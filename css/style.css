@@ -92,7 +92,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
 }
 
 button, span {
@@ -101,7 +100,6 @@ button, span {
 
 main {
   width: min(405px, 90%);
-  margin: 2rem auto;
 }
 main .top {
   display: flex;
