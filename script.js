@@ -53,3 +53,15 @@ function Local() {
         return body.classList.remove('theme-2');
     }
 }
+
+function Calculator() {
+    let numbers = document.querySelectorAll('[data-numbers]');
+    let del = document.querySelector('.delete');
+    let reset = document.querySelector('.reset');
+    let equal = document.querySelector('.equal');
+    let operation = document.querySelectorAll('[data-operation]');
+    let screenText = document.querySelector('.screen_text');
+
+}
+
+Calculator();

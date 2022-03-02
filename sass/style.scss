@@ -89,6 +89,7 @@ main {
 
     .screen {
         border-radius: 10px;
+        min-height: 95px;
         background: var(--screen-bg);
         padding: 1.7rem;
         margin-bottom: 1.5rem;
@@ -125,7 +126,7 @@ main {
             border: none;
             transition: .3s ease;
 
-            &:hover, &:focus {
+            &:hover {
                 transform: scale(0.95);
                 box-shadow: none;
             }

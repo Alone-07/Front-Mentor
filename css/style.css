@@ -160,6 +160,7 @@ main .top .toggle_container .toggle .toggler {
 }
 main .screen {
   border-radius: 10px;
+  min-height: 95px;
   background: var(--screen-bg);
   padding: 1.7rem;
   margin-bottom: 1.5rem;
@@ -193,7 +194,7 @@ main .keypad button {
   border: none;
   transition: 0.3s ease;
 }
-main .keypad button:hover, main .keypad button:focus {
+main .keypad button:hover {
   transform: scale(0.95);
   box-shadow: none;
 }
