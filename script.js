@@ -8,6 +8,7 @@ const lbThumbImg = document.querySelectorAll('[data-lbthumb]');
 const lbSlideImg = document.querySelectorAll('[data-lbimg]');
 const lb = document.querySelector('.lightbox');
 
+
 menu.addEventListener('click', _ => {
     nav.style.display = 'block';
 });
@@ -34,14 +35,16 @@ next.addEventListener('click', _ => {
 
 // -------x-x-----x-x-x-x-x-x-x-x-x-x--------x-x-x------
 let lbSlide = 0;
-slideImg.forEach(e => {
-    e.addEventListener('click', _ => {
-        let data = e.dataset.img;
-        lbSlide += data;
-        lb.style.display = 'flex';
-        lightboxSlideShow(data);
-    })
-});
+if (matchMedia('(min-width: 768px)').matches) {
+    slideImg.forEach(e => {
+        e.addEventListener('click', _ => {
+            let data = e.dataset.img;
+            lbSlide += data;
+            lb.style.display = 'flex';
+            lightboxSlideShow(data);
+        })
+    });
+}
 function preNext() {
     let lbPre = document.querySelector('[data-lbpre]');
     let lbnext = document.querySelector('[data-lbNext]');
@@ -120,3 +123,48 @@ slideShow(slide);
 // --------------XXXXXX-------------XXXXXXX-------------
 
 // now only add to cart and cart items
+
+function cart() {
+    let plus = document.querySelector('[data-plus]');
+    let minus = document.querySelector('[data-minus]');
+    let items = document.querySelector('[data-items]');
+    let times = document.querySelector('[data-times]');
+    let cost = document.querySelector('[data-cost]');
+    let del = document.querySelector('[data-delete]');
+    let empty = document.querySelector('[data-empty]');
+    let cart = document.querySelector('[data-cart]');
+    let cartContainer = document.querySelector('[data-cartContainer]');
+    let toCart = document.querySelector('[data-addtocart]');
+    let countdown = 1;
+
+    plus.addEventListener('click', _ => {
+        let data = (countdown += 1);
+        items.innerText = data;
+        console.log(data);
+    })
+    minus.addEventListener('click', _ => {
+        if (countdown <= 1) { countdown = 2 };
+        let data = (countdown -= 1);
+        items.innerText = data;
+        console.log(data);
+    })
+
+    del.addEventListener('click', _ => {
+        empty.style.display = 'flex';
+        cart.dataset.cart = '0';
+    })
+    cart.addEventListener('click', _ => {
+        cartContainer.classList.toggle('blocks');
+        // console.log(cartContainer)
+    })
+    toCart.addEventListener('click', calculation);
+    function calculation() {
+        empty.style.display = 'none';
+        let totalCost = (countdown * 125).toFixed(2);
+        cost.innerText = '$' + totalCost;
+        times.innerText = countdown;
+        cart.dataset.cart = countdown;
+        console.log(totalCost);
+    }
+}
+cart();

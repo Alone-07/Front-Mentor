@@ -30,7 +30,7 @@
         <li class="links_container"><a href="javascript:void(0)" class="links">Contact</a></li>
       </ul>
     </nav>
-    <span class="cart"><img src="/images/icon-cart.svg" alt="cart"></span>
+    <span class="cart" data-cart="0"><img src="/images/icon-cart.svg" alt="cart"></span>
     <span class="profile"><img src="/images/image-avatar.png" alt="avatar"></span>
   </header>
 
@@ -72,11 +72,11 @@
       </div>
       <div class="quantity">
         <div class="quantity_container">
-          <span class="minus"><img src="/images/icon-minus.svg" alt="minus"></span>
-          <p class="no_of_items">0</p>
-          <span class="minus"><img src="/images/icon-plus.svg" alt="plus"></span>
+          <span class="minus" data-minus=""><img src="/images/icon-minus.svg" alt="minus"></span>
+          <p class="no_of_items" data-items="">1</p>
+          <span class="plus" data-plus=""><img src="/images/icon-plus.svg" alt="plus"></span>
         </div>
-        <div class="add_to_cart">
+        <div class="add_to_cart" data-addtocart="">
           <span><img src="/images/icon-cart-white.svg" alt="cart"></span>
           <p class="add_to_cart_text">Add to cart</p>
         </div>
@@ -111,6 +111,26 @@
           <img src="/images/image-product-4-thumbnail.jpg" alt="thumbnail-product-4">
         </span>
       </div>
+    </div>
+  </section>
+  <!-- cart -->
+  <section class="cart_container blocks" data-cartContainer="">
+    <h3 class="cart_container_title">Cart</h3>
+    <div class="wrapper">
+      <span class="line"></span>
+      <div class="empty" data-empty="">Your cart is empty.</div>
+      <div class="add_items_container">
+        <span class="img"><img src="/images/image-product-1-thumbnail.jpg" alt="img"></span>
+        <div class="text">
+          <p class="text_name">Autumn Limited Edition...</p>
+          <p class="cost">$125.00 x
+            <span class="items" data-times="">0</span>
+            <span class="total_cost" data-cost="">$0</span>
+          </p>
+        </div>
+        <span class="delete" data-delete=""><img src="/images/icon-delete.svg" alt="delete"></span>
+      </div>
+      <a class="checkout" href="javascript: void(0)">Checkout</a>
     </div>
   </section>
 </body>

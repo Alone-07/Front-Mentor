@@ -44,7 +44,7 @@ header {
     width: min(1110px, 90%);
     margin: 0 auto;
     justify-content: flex-start;
-    padding: max(2vw, 1.3rem) 0;
+    padding: max(1vw, 1.3rem) 0;
     border-bottom: 1px solid var(--Grayish_blue);
 
     //menu 
@@ -92,9 +92,30 @@ header {
     .cart {
         margin-left: auto;
         margin-right: var(--m-r);
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+            content: attr(data-cart);
+            position: absolute;
+            color: var(--White);
+            background: var(--Orange);
+            border-radius: 10px;
+            font-size: 10px;
+            padding: 2px 8px;
+            bottom: 80%;
+            left: 25%;
+        }
     }
     .profile {
-        width: max(4vw, 25px);
+        width: max(3vw, 25px);
+        border: 2px solid transparent;
+        border-radius: var(--br-50);
+        cursor: pointer;
+
+        &:hover {
+            border-color: var(--Orange);
+        }
     }
 }
 
@@ -170,7 +191,7 @@ main {
         align-items: flex-start;
         width: var(--main-w-pro);
         margin-top: .5rem;
-
+        margin-bottom: 3rem;
         &_company {
             text-transform: uppercase;
             color: var(--Orange);
@@ -229,9 +250,15 @@ main {
                 padding: 0 1.3rem;
                 border-radius: var(--br-10);
                 margin-bottom: 1rem;
+
+                .plus, .minus {
+                cursor: pointer;
+                    
+                }
             }
             .no_of_items {
                 font-weight: var(--fw-700);
+                cursor: default;
             }
 
             .add_to_cart{
@@ -239,6 +266,12 @@ main {
                 width: 100%;
                 background: var(--Orange);
                 border-radius: var(--br-10);
+                box-shadow: 0px 12px 28px 0px rgba(255, 125, 26, .35);
+                cursor: pointer;
+
+                &:hover {
+                    opacity: .65;
+                }
                 &_text {
                     font-weight: var(--fw-700);
                     margin-left: 1rem;
@@ -248,4 +281,109 @@ main {
         }
 
     }
+}
+.blocks {
+    display: none;
+}
+.cart_container {
+    // display: none;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: min(400px, 90%);
+    margin: 0 auto; 
+    border-radius: var(--br-10);
+    background: var(--White);
+    padding-bottom: 2rem;
+    box-shadow: 0px 8px 20px 0px rgba($color: #000000, $alpha: .195);
+    z-index: 222;
+
+    &_title {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem 0 .5rem 0;
+        color: var(--Very_vark_blue);
+        font-weight: var(--fw-700);  
+    }
+
+    .wrapper {
+        position: relative;
+        
+    .line {
+        width: 100%;  
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        border-color: var(--Grayish_blue);
+        border-width: 1px;
+        border-style: solid;
+    }  
+        .empty {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--White);
+            color: var(--Dark_grayish_blue);
+            font-weight: var(--fw-700);
+            @extend .flex;
+
+        }
+     .add_items_container {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem 0;
+
+
+        .img {
+            width: 50px;
+            border-radius: var(--br-10);
+            margin-right: 1rem;
+
+            img {
+                border-radius: var(--br-5);
+
+            }
+        }
+
+        .text {
+            @extend .flex;
+            flex-flow: column;
+            align-items: flex-start;
+            color: var(--Dark_grayish_blue);
+            font-weight: var(--fw-400);
+
+            p {
+                margin: 0;
+            }
+            .cost {
+
+                .total_cost {
+                    font-weight: var(--fw-700);
+                    color: var(--Very_vark_blue);
+                }
+            }
+        }
+        .delete {
+            margin-left: auto;
+        }
+        
+        
+    }
+    .checkout {
+        @extend .flex;
+        width: 90%;
+        margin: 0 auto;
+        background: var(--Orange);
+        border-radius: var(--br-10);
+        cursor: pointer;
+        color: var(--White);
+        padding: 1rem;
+
+    }
+}
 }
