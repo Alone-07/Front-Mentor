@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="script.js" defer></script>
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+  <header>
+    <span class="menu"><img src="/images/icon-menu.svg" alt="menu"></span>
+    <span class="logo"><img src="/images/logo.svg" alt="logo"></span>
+    <nav data-nav="">
+      <ul>
+        <li class="close"><img src="/images/icon-close.svg" alt="close"></li>
+        <li class="links_container"><a href="javascript:void(0)" class="links">Collections</a></li>
+        <li class="links_container"><a href="" class="links">Men</a></li>
+        <li class="links_container"><a href="javascript:void(0)" class="links">Women</a></li>
+        <li class="links_container"><a href="javascript:void(0)" class="links">About</a></li>
+        <li class="links_container"><a href="javascript:void(0)" class="links">Contact</a></li>
+      </ul>
+    </nav>
+    <span class="cart"><img src="/images/icon-cart.svg" alt="cart"></span>
+    <span class="profile"><img src="/images/image-avatar.png" alt="avatar"></span>
+  </header>
+
+  <main>
+    <section class="product_img">
+      <div class="product_img_container">
+        <span data-img="1"><img src="/images/image-product-1.jpg" alt="product-1"></span>
+        <span data-img="2"><img src="/images/image-product-2.jpg" alt="product-2"></span>
+        <span data-img="3"><img src="/images/image-product-3.jpg" alt="product-3"></span>
+        <span data-img="4"><img src="/images/image-product-4.jpg" alt="product-4"></span>
+        <!-- previous and next -->
+        <span class="previous"><img src="/images/icon-previous.svg" alt="previous"></span>
+        <span class="next"><img src="/images/icon-next.svg" alt="next"></span>
+      </div>
+      <div class="thumbnail_img_container">
+        <span data-thumb="1">
+          <img src="/images/image-product-1-thumbnail.jpg" alt="thumbnail-product-1">
+        </span>
+        <span data-thumb="2">
+          <img src="/images/image-product-2-thumbnail.jpg" alt="thumbnail-product-2">
+        </span>
+        <span data-thumb="3">
+          <img src="/images/image-product-3-thumbnail.jpg" alt="thumbnail-product-3">
+        </span>
+        <span data-thumb="4">
+          <img src="/images/image-product-4-thumbnail.jpg" alt="thumbnail-product-4">
+        </span>
+      </div>
+    </section>
+
+    <section class="product">
+      <p class="product_company">Sneaker Company</p>
+      <h1 class="product_name">Fall Limited Edition Sneakers</h1>
+      <p class="product_details">These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="product_rate">
+        <p class="product_rate-now">$125.00 <span class="discount">50%</span></p>
+        <p class="product_rate-before"><strike>$250.00</strike></p>
+      </div>
+      <div class="quantity">
+        <div class="quantity_container">
+          <span class="minus"><img src="/images/icon-minus.svg" alt="minus"></span>
+          <p class="no_of_items">0</p>
+          <span class="minus"><img src="/images/icon-plus.svg" alt="plus"></span>
+        </div>
+        <div class="add_to_cart">
+          <span><img src="/images/icon-cart-white.svg" alt="cart"></span>
+          <p class="add_to_cart_text">Add to cart</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+
+
+</html>

@@ -1,0 +1,111 @@
+@use './utilites' as *;
+
+@media screen and (min-width: 768px){
+    :root {
+        --block: none;
+        --none: block;
+        // --m-r: 1.5rem;  
+    }
+
+    .opacity {
+        border: 2px solid var(--Orange);
+
+        & > img {
+           opacity: .25;
+        }
+    }
+    header {
+        margin-bottom: 4rem;
+        nav {
+            position: static;
+            min-height: 100%;
+            background: var(--White);
+            inset: none;
+    
+            ul {
+                flex-flow: row;
+                width:100%;
+                min-height: 100%;
+                background: var(--White);
+
+
+                .links_container {
+                    color: var(--Grayish_blue );
+                    font-weight: var(--fw-400);
+                }
+                li + li {
+                    margin-bottom: 0;
+                    margin-left: var(--m-r);
+                }
+            }
+        }
+        .cart {
+            --m-r: 2.3rem;
+        }
+    }
+
+    main {
+        flex-flow: row;
+        padding: 0 2rem;
+
+        .product_img {
+
+            --main-w-img: 50%;
+            margin-right: min(10rem, 8vw);
+
+            &_container {
+                margin-bottom: 1.5rem;
+                span img {
+                    border-radius: var(--br-10);
+                }
+            }
+
+            .thumbnail_img_container {
+                --none: flex;
+                --main-w-pro: 50%;
+                --m-l: 1.3rem;
+                justify-content: space-between;
+
+                span {
+                    width: 25%;
+                }
+            }
+        }
+
+        .product {
+
+            &_name {
+                font-size: min(36px, 3vw);
+            }
+
+            &_rate{
+                flex-flow: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-bottom: 1.3rem;
+            
+                &-now {
+                    margin-bottom: 1px;
+                }
+                &-before {
+                    margin-top: 2px;
+                    margin-left: 1px;
+                }
+            }
+
+            .quantity {
+                flex-flow: row;
+
+                &_container {
+                    margin-bottom: 0;
+                    margin-right: 1rem;
+                    flex: 1;
+                }
+
+                .add_to_cart {
+                    flex: 2;    
+                }
+            }
+        }
+    }
+}
