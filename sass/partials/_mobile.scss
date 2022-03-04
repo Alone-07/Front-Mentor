@@ -1,6 +1,7 @@
 @use './utilites' as *;
 *,*::before, *::after{
     box-sizing: border-box;
+    transition: .3s ease;
 }
 span {
     display: inline-block;

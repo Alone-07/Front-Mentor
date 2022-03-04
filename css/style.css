@@ -27,6 +27,7 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+  transition: 0.3s ease;
 }
 
 span {
@@ -241,6 +242,83 @@ main .product .quantity .add_to_cart_text {
   font-weight: var(--fw-700);
   margin-left: 1rem;
   color: var(--White);
+}
+
+.opacity1 {
+  border: 2px solid var(--Orange);
+  background: #fff;
+}
+.opacity1 > img {
+  opacity: 0.25;
+}
+
+.lightbox {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--lb);
+  min-height: 100vh;
+  z-index: 22;
+}
+.lightbox_container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+}
+.lightbox_container .lightbox_close {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+.lightbox_container .lightbox_img_container {
+  margin-bottom: 1.3rem;
+  position: relative;
+}
+.lightbox_container .lightbox_img_container .previous {
+  display: block;
+  padding: 9.5px 13px;
+  background: var(--Light_grayish_blue);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  text-align: center;
+  transform: translate(0, -50%);
+}
+.lightbox_container .lightbox_img_container .next {
+  display: block;
+  padding: 9.5px 12.5px;
+  background: var(--Light_grayish_blue);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  text-align: center;
+  transform: translate(0, -50%);
+}
+.lightbox_container .lightbox_img_container span > img {
+  border-radius: var(--br-10);
+}
+.lightbox_container .lightbox_thumbnail_img_container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox_container .lightbox_thumbnail_img_container span {
+  width: 80px;
+  border-radius: var(--br-10);
+}
+.lightbox_container .lightbox_thumbnail_img_container span img {
+  border-radius: var(--br-10);
+  z-index: 1;
+}
+.lightbox_container .lightbox_thumbnail_img_container span + span {
+  margin-left: 1.3rem;
 }
 
 @media screen and (min-width: 768px) {

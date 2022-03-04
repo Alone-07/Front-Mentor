@@ -4,6 +4,9 @@ const close = document.querySelector('.close');
 const nav = document.querySelector('[data-nav]');
 const slideImg = document.querySelectorAll('[data-img]');
 const thumbImg = document.querySelectorAll('[data-thumb]');
+const lbThumbImg = document.querySelectorAll('[data-lbthumb]');
+const lbSlideImg = document.querySelectorAll('[data-lbimg]');
+const lb = document.querySelector('.lightbox');
 
 menu.addEventListener('click', _ => {
     nav.style.display = 'block';
@@ -29,6 +32,74 @@ next.addEventListener('click', _ => {
     // console.log('by next ' + slide)
 })
 
+// -------x-x-----x-x-x-x-x-x-x-x-x-x--------x-x-x------
+let lbSlide = 0;
+slideImg.forEach(e => {
+    e.addEventListener('click', _ => {
+        let data = e.dataset.img;
+        lbSlide += data;
+        lb.style.display = 'flex';
+        lightboxSlideShow(data);
+    })
+});
+function preNext() {
+    let lbPre = document.querySelector('[data-lbpre]');
+    let lbnext = document.querySelector('[data-lbNext]');
+    lbPre.addEventListener('click', _ => {
+        console.log('lb Slide ' + lbSlide);
+        if (lbSlide >= 11) { lbSlide = 4 }
+        let lbData = lbSlide - 1;
+        if (lbData == 0) { lbData = 4 };
+        lbSlide = lbData;
+        console.log('lb data ' + lbData);
+        lightboxSlideShow(lbData);
+    })
+    lbnext.addEventListener('click', _ => {
+        console.log('lb Slide ' + lbSlide);
+        let lbData1 = lbSlide + 1;
+        if (lbData1 > 5) { lbData1 = 2 }
+        if (lbData1 == 5) { lbData1 = 1 }
+        lbSlide = lbData1;
+        console.log('lb data1 ' + lbData1);
+        lightboxSlideShow(lbData1);
+    })
+
+    lbThumbImg.forEach(e => {
+
+        e.addEventListener('click', _ => {
+            let data = e.dataset.lbthumb;
+            lightboxSlideShow(data);
+        })
+    })
+}
+preNext();
+// lightbox
+function lightboxSlideShow(value) {
+    const lbClose = document.querySelector('.lightbox_close');
+    lbClose.addEventListener('click', _ => {
+        lb.style.display = 'none';
+    })
+    lbSlideImg.forEach(e => {
+        e.style.display = 'none';
+    })
+    lbThumbImg.forEach(e => {
+        e.classList.remove('opacity1');
+    })
+    let countdown = value;
+    let slideValue = countdown - 1;
+    console.log(slideValue);
+    lbSlideImg[slideValue].style.display = 'block';
+    lbThumbImg[slideValue].classList.add('opacity1');
+
+}
+lightboxSlideShow(1);
+
+thumbImg.forEach(e => {
+    e.addEventListener('click', _ => {
+        let data = e.dataset.thumb;
+        slideShow(data);
+    })
+})
 function slideShow(value) {
     slideImg.forEach(e => {
         e.style.display = 'none';
@@ -37,15 +108,15 @@ function slideShow(value) {
     // Thumbnail img
     thumbImg.forEach(e => {
         e.classList.remove('opacity');
-        e.addEventListener('click', _ => {
-            let data = e.dataset.thumb;
-            slideShow(data);
-        })
     })
     let countdown = value;
     let slideValue = countdown - 1;
-    console.log(slideValue);
+    console.log('phone Slide' + slideValue);
     slideImg[slideValue].style.display = 'block';
     thumbImg[slideValue].classList.add('opacity');
 }
 slideShow(slide);
+
+// --------------XXXXXX-------------XXXXXXX-------------
+
+// now only add to cart and cart items
