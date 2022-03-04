@@ -57,7 +57,7 @@ function preNext() {
     lbnext.addEventListener('click', _ => {
         console.log('lb Slide ' + lbSlide);
         let lbData1 = lbSlide + 1;
-        if (lbData1 > 5) { lbData1 = 2 }
+        if (lbData1 > 5) { lbData1 = 1 }
         if (lbData1 == 5) { lbData1 = 1 }
         lbSlide = lbData1;
         console.log('lb data1 ' + lbData1);
