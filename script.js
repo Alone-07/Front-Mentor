@@ -39,7 +39,7 @@ if (matchMedia('(min-width: 768px)').matches) {
     slideImg.forEach(e => {
         e.addEventListener('click', _ => {
             let data = e.dataset.img;
-            lbSlide += data;
+            lbSlide += parseFloat(data);
             lb.style.display = 'flex';
             lightboxSlideShow(data);
         })
@@ -49,21 +49,19 @@ function preNext() {
     let lbPre = document.querySelector('[data-lbpre]');
     let lbnext = document.querySelector('[data-lbNext]');
     lbPre.addEventListener('click', _ => {
-        console.log('lb Slide ' + lbSlide);
-        if (lbSlide >= 11) { lbSlide = 4 }
+        console.log(' previous lb Slide ' + lbSlide);
         let lbData = lbSlide - 1;
-        if (lbData == 0) { lbData = 4 };
+        if (lbData == 0) { lbData = lbSlideImg.length };
         lbSlide = lbData;
-        console.log('lb data ' + lbData);
+        console.log(' previous lb data ' + lbData);
         lightboxSlideShow(lbData);
     })
     lbnext.addEventListener('click', _ => {
-        console.log('lb Slide ' + lbSlide);
+        console.log(' next lb Slide ' + lbSlide);
         let lbData1 = lbSlide + 1;
-        if (lbData1 > 5) { lbData1 = 1 }
-        if (lbData1 == 5) { lbData1 = 1 }
+        if (lbData1 > lbSlideImg.length) { lbData1 = 1 }
         lbSlide = lbData1;
-        console.log('lb data1 ' + lbData1);
+        console.log(' next lb data1 ' + lbData1);
         lightboxSlideShow(lbData1);
     })
 
@@ -90,12 +88,12 @@ function lightboxSlideShow(value) {
     })
     let countdown = value;
     let slideValue = countdown - 1;
-    console.log(slideValue);
+    console.log('lightbox function slideValue: ' + slideValue);
     lbSlideImg[slideValue].style.display = 'block';
     lbThumbImg[slideValue].classList.add('opacity1');
 
 }
-lightboxSlideShow(1);
+// lightboxSlideShow(1);
 
 thumbImg.forEach(e => {
     e.addEventListener('click', _ => {
