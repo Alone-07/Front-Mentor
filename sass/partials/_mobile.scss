@@ -137,6 +137,7 @@ main {
 
             span {
                 border-radius: var(--br-0);
+                cursor: pointer;
             }
             // span + span {
             //     display: none;
@@ -370,6 +371,7 @@ main {
         }
         .delete {
             margin-left: auto;
+            cursor: pointer;
         }
         
         

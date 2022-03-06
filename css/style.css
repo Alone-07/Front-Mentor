@@ -156,6 +156,7 @@ main .product_img_container {
 }
 main .product_img_container span {
   border-radius: var(--br-0);
+  cursor: pointer;
 }
 main .product_img_container .previous {
   display: var(--block);
@@ -349,6 +350,7 @@ main .product .quantity .add_to_cart_text {
 }
 .cart_container .wrapper .add_items_container .delete {
   margin-left: auto;
+  cursor: pointer;
 }
 .cart_container .wrapper .checkout {
   width: 90%;
