@@ -187,6 +187,7 @@ main .product_img .thumbnail_img_container {
 main .product_img .thumbnail_img_container span {
   position: relative;
   border-radius: var(--br-10);
+  cursor: pointer;
 }
 main .product_img .thumbnail_img_container span + span {
   margin-left: var(--m-l);
