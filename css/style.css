@@ -392,6 +392,7 @@ main .product .quantity .add_to_cart_text {
 .lightbox_container .lightbox_close {
   align-self: flex-end;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .lightbox_container .lightbox_img_container {
   margin-bottom: 1.3rem;
@@ -407,6 +408,7 @@ main .product .quantity .add_to_cart_text {
   left: -15px;
   text-align: center;
   transform: translate(0, -50%);
+  cursor: pointer;
 }
 .lightbox_container .lightbox_img_container .next {
   display: block;
@@ -418,6 +420,7 @@ main .product .quantity .add_to_cart_text {
   right: -15px;
   text-align: center;
   transform: translate(0, -50%);
+  cursor: pointer;
 }
 .lightbox_container .lightbox_img_container span > img {
   border-radius: var(--br-10);
@@ -432,6 +435,7 @@ main .product .quantity .add_to_cart_text {
   width: 80px;
   border-radius: var(--br-10);
   background: var(--White);
+  cursor: pointer;
 }
 .lightbox_container .lightbox_thumbnail_img_container span:hover {
   opacity: 0.65;
