@@ -1,4 +1,4 @@
-// import hi from './modules';
+import hi from './modules';
 class password {
     constructor(screen, length) {
         this.screen = screen;
