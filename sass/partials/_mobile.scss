@@ -26,9 +26,6 @@ main {
     @extend .flex;
     flex-flow: column;
 
-    // &> section {
-    //     flex: 1;
-    // }
     .img_part {
         width: var(--part-w);
         position: relative;
