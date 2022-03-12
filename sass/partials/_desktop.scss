@@ -56,6 +56,8 @@
 
             .slide {
                 left: 100%; 
+                width: 147px;
+                height: 80px;
             }
         }
 
@@ -64,10 +66,10 @@
 
             .text_part_container {
                 --t-w:70%;
-                margin-left: 5rem;
+                margin-left: 6rem;
 
                 .heading {
-                    font-size: 36px;
+                    font-size: 38px;
                 }
             }
         }
