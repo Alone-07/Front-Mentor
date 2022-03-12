@@ -1,0 +1,91 @@
+@use  './utilites' as *;
+
+@media screen and (min-width: 1268px) {
+  
+    :root {
+        --none: block;
+        --block: none;
+    }
+
+    main {
+        flex-flow: row;
+        justify-content: flex-start;
+        --part-w: 100%;
+        padding: 0;
+        margin: 0;
+        
+        
+        .img_part {
+            
+            nav {
+               --t-w: 50%;
+               left: 8%;
+               transform: translate(0%,-50%);
+               justify-content: flex-start;
+               .logo {
+                   width: 100px;
+                   margin-right: auto;
+                   display: flex;
+                   justify-content: flex-start;
+                   align-items: center;
+                }
+                ul {
+                    --none: flex;
+                    position: static;
+                    padding: 0;
+                    background-color: transparent;
+                    li {
+                        color: white;
+                        margin-left: .5rem;
+                    }
+
+                    li:nth-child(2) {
+                        margin-left: 2rem;
+                    }
+                }
+            }
+
+            .slide {
+                left: 100%; 
+            }
+        }
+
+        .text_part {
+            justify-content: flex-start;
+
+            .text_part_container {
+                --t-w:60%;
+                margin-left: 5rem;
+
+                .heading {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+
+    footer {
+        flex-flow: row;
+        justify-content: space-between;
+
+        & > div {
+            width: 33.33%;
+        }
+        .footer_text {
+            margin: 0 auto;
+            width: 40%;
+            padding: 0rem 1rem;
+        }
+
+        .footer_img {
+            justify-content: flex-start;
+          
+        }
+        .footer_img-light {
+            justify-content: flex-end;
+
+        }
+    }
+    
+}
+
