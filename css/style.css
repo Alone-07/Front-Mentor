@@ -13,7 +13,7 @@
   --none: none;
   --flex: flex;
   --t-w: min(450px, 85%);
-  --part-w: min(375px, 100%);
+  --part-w: min(650px, 100%);
 }
 
 *, *:before, *:after {
