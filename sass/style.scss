@@ -1,0 +1,147 @@
+@use "./root" as *;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+span,
+input {
+  display: inline-block;
+}
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert {
+  background: url(/images/icon-error.svg) no-repeat;
+  background-position: 90% center;
+}
+// .block {
+//   display: block;
+// }
+@mixin box($br-radius, $bg, $bs, $bs-clr) {
+  background: $bg;
+  border-radius: $br-radius;
+  box-shadow: 0 $bs 0rem 0rem $bs-clr;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: url(/images/bg-intro-mobile.png) no-repeat;
+  background-color: var(--red);
+  color: white;
+  font-family: var(--ff);
+  font-size: var(--fs);
+  @extend .flex;
+}
+
+main {
+  width: var(--w);
+  margin: 6rem auto;
+  @extend .flex;
+  flex-flow: column;
+
+  .heading {
+    text-align: center;
+    font-size: 26px;
+  }
+  .text {
+    text-align: center;
+    width: 100%;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+  }
+
+  .link {
+    width: 100%;
+    background: var(--blue);
+    padding: 1rem 4rem;
+    text-align: center;
+    font-weight: var(--fw-4);
+    margin-bottom: 1.5rem;
+    color: var(--gray-blue);
+    @include box(10px, var(--blue), 0.5rem, rgb(0 0 0 / 0.2));
+
+    strong {
+      color: white;
+    }
+  }
+
+  form {
+    padding: 1.3rem;
+    @include box(10px, white, 0.5rem, rgb(0 0 0 / 0.2));
+
+    .error {
+      display: none;
+      color: var(--red);
+      text-align: right;
+      width: 100%;
+      font-size: 13px;
+      margin: 0.3rem auto;
+      font-weight: var(--fw-4);
+    }
+    input {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid var(--gray-blue);
+      border-radius: 5px;
+      margin-top: 1rem;
+      cursor: pointer;
+
+      &::placeholder {
+        color: var(--blue);
+        font-weight: var(--fw-7);
+        font-family: var(--ff);
+      }
+    }
+
+    input[type="submit"] {
+      background: var(--green);
+      @include box(5px, var(--green), 5px, hsl(154, 85%, 41%));
+      text-transform: uppercase;
+      font-weight: var(--fw-7);
+      color: var(--white);
+      letter-spacing: 2px;
+      padding: 1.2rem;
+      border: none;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      color: var(--gray-blue);
+      font-size: 12px;
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+
+      strong {
+        color: var(--red);
+      }
+    }
+  }
+}

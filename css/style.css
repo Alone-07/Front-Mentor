@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --gray-blue: hsl(246, 25%, 77%);
+  --fs: 16px;
+  --fw-4: 400;
+  --fw-5: 500;
+  --fw-6: 600;
+  --fw-7: 700;
+  --ff: "Poppins", sans-serif;
+  --w: min(450px, 85%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+span,
+input {
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.flex, main, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert {
+  background: url(/images/icon-error.svg) no-repeat;
+  background-position: 90% center;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: url(/images/bg-intro-mobile.png) no-repeat;
+  background-color: var(--red);
+  color: white;
+  font-family: var(--ff);
+  font-size: var(--fs);
+}
+
+main {
+  width: var(--w);
+  margin: 6rem auto;
+  flex-flow: column;
+}
+main .heading {
+  text-align: center;
+  font-size: 26px;
+}
+main .text {
+  text-align: center;
+  width: 100%;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+main .link {
+  width: 100%;
+  background: var(--blue);
+  padding: 1rem 4rem;
+  text-align: center;
+  font-weight: var(--fw-4);
+  margin-bottom: 1.5rem;
+  color: var(--gray-blue);
+  background: var(--blue);
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 0rem 0rem rgba(0, 0, 0, 0.2);
+}
+main .link strong {
+  color: white;
+}
+main form {
+  padding: 1.3rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 0rem 0rem rgba(0, 0, 0, 0.2);
+}
+main form .error {
+  display: none;
+  color: var(--red);
+  text-align: right;
+  width: 100%;
+  font-size: 13px;
+  margin: 0.3rem auto;
+  font-weight: var(--fw-4);
+}
+main form input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--gray-blue);
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+main form input::placeholder {
+  color: var(--blue);
+  font-weight: var(--fw-7);
+  font-family: var(--ff);
+}
+main form input[type=submit] {
+  background: var(--green);
+  background: var(--green);
+  border-radius: 5px;
+  box-shadow: 0 5px 0rem 0rem #10c174;
+  text-transform: uppercase;
+  font-weight: var(--fw-7);
+  color: var(--white);
+  letter-spacing: 2px;
+  padding: 1.2rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+main form .description {
+  color: var(--gray-blue);
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+main form .description strong {
+  color: var(--red);
+}
+
+/*# sourceMappingURL=style.css.map */
