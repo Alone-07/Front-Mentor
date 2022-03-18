@@ -18,10 +18,11 @@
   body {
     background: url(/images/bg-intro-desktop.png) no-repeat;
     background-color: var(--red);
+    background-size: cover;
   }
 
   main {
-    --w: 80%;
+    --w: min(1250px, 80%);
     flex-flow: row;
     justify-content: space-between;
   }
