@@ -1,0 +1,25 @@
+@use "./root" as *;
+@media screen and (min-width: 768px) {
+  body {
+    background: url(/images/bg-intro-desktop.png) no-repeat;
+    background-color: var(--red);
+  }
+  main {
+    --w: 80%;
+    flex-flow: row;
+    justify-content: space-between;
+
+    .textContainer {
+      width: 46%;
+      // margin-right: 2rem;
+
+      .heading,
+      .text {
+        text-align: left;
+      }
+    }
+    .form {
+      width: 50%;
+    }
+  }
+}

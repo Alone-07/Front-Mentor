@@ -1,0 +1,40 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --gray-blue: hsl(246, 25%, 77%);
+  --fs: 16px;
+  --fw-4: 400;
+  --fw-5: 500;
+  --fw-6: 600;
+  --fw-7: 700;
+  --ff: "Poppins", sans-serif;
+  --w: min(450px, 85%);
+  --h: clamp(30px, 3vw, 42px);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url(/images/bg-intro-desktop.png) no-repeat;
+    background-color: var(--red);
+  }
+
+  main {
+    --w: 80%;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  main .textContainer {
+    width: 46%;
+  }
+  main .textContainer .heading,
+main .textContainer .text {
+    text-align: left;
+  }
+  main .form {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */

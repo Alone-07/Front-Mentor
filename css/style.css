@@ -12,6 +12,7 @@
   --fw-7: 700;
   --ff: "Poppins", sans-serif;
   --w: min(450px, 85%);
+  --h: clamp(30px, 3vw, 42px);
 }
 
 *,
@@ -79,7 +80,7 @@ main {
 }
 main .heading {
   text-align: center;
-  font-size: 26px;
+  font-size: var(--h);
 }
 main .text {
   text-align: center;
