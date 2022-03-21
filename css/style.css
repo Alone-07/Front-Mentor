@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+:root {
+  --Bright_Blue: hsl(220, 98%, 61%);
+  --check-bg: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --block: block;
+  --none: none;
+  --flex: flex;
+  --w: min(400px, 85%);
+  --h-fs: 26px;
+  --t-fs: 14px;
+  --padding: 0.4rem 1rem;
+  --TH-1_bg: hsl(0, 0%, 98%);
+  --TH-1_panel-bg: hsl(236, 33%, 92%);
+  --TH-1_panel-text1: hsl(233, 11%, 84%);
+  --TH-1_panel-text: hsl(236, 9%, 61%);
+  --TH-1_li-text: hsl(235, 19%, 35%);
+  --TH-2_bg: hsl(235, 21%, 11%);
+  --TH-2_panel-bg: hsl(235, 24%, 19%);
+  --TH-2_li-text: hsl(234, 39%, 85%);
+  --TH-2_li-text-hover: hsl(236, 33%, 92%);
+  --TH-2_text1: hsl(233, 14%, 35%);
+  --TH-2_text2: hsl(237, 14%, 26%);
+  --fs: 18px;
+  --ff: "Josefin Sans", sans-serif;
+  --fw-4: 400;
+  --fw-7: 7000;
+  --mob-bg-dark: url(/images/bg-mobile-dark.jpg);
+  --mob-bg-light: url(/images/bg-mobile-light.jpg);
+  --des-bg-dark: url(/images/bg-desktop-dark.jpg);
+  --des-bg-light: url(/images/bg-desktop-light.jpg);
+}
+
+.sun {
+  --TH-2_bg: var(--TH-1_bg);
+  --TH-2_panel-bg: var(--TH-1_panel-bg);
+  --TH-2_li-text: var(--TH-1_li-text);
+  --TH-2_text2: var(--TH-1_panel-text);
+  --TH-2_text1: var(--TH-1_panel-text1);
+  --mob-bg-dark: var(--mob-bg-light);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+span,
+input,
+label {
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+li {
+  list-style: disc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.flex, main .choose, main .todoList .itemsLeft, main .todoList .list .cross, main .todoList .list, main .input_container, main .logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=radio] {
+  width: 25px;
+  height: 25px;
+  margin-right: 1rem;
+  position: relative;
+}
+input[type=radio]::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--TH-2_text1);
+  background-color: var(--TH-2_panel-bg);
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-image: var(--mob-bg-dark);
+  background-repeat: no-repeat;
+  background-color: var(--TH-2_bg);
+  background-position: top center;
+  font-family: var(--ff);
+  font-size: var(--fs);
+}
+
+main {
+  width: var(--w);
+  margin: 3rem auto;
+}
+main .logo_container {
+  flex-flow: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+main .logo_container .logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: var(--h-fs);
+}
+main .logo_container .toggler .moon {
+  display: var(--none);
+}
+main .logo_container .toggler .sun {
+  display: var(--block);
+}
+main .input_container {
+  --padding: 0.8rem 1rem;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--TH-2_panel-bg);
+  padding: var(--padding);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+main .input_container input[type=text] {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--TH-2_li-text);
+  font-family: var(--ff);
+  font-weight: var(--fw-7);
+  font-size: var(--t-fs);
+  font-color: var(--TH-2_Very-Dark-Grayish-Blue);
+}
+main .todoList {
+  background: var(--TH-2_panel-bg);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+main .todoList .list {
+  justify-content: flex-start;
+  padding: var(--padding);
+  border-bottom: 1px solid var(--TH-2_text2);
+  border-radius: 5px;
+}
+main .todoList .list .listText {
+  color: var(--TH-2_li-text);
+  font-size: var(--t-fs);
+  position: relative;
+}
+main .todoList .list .listText:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.3px;
+  background: var(--TH-2_li-text);
+  top: 50%;
+  left: 0;
+  display: none;
+  transform: translate(0%, -50%);
+}
+main .todoList .list .cross {
+  margin-left: auto;
+  width: 15px;
+  height: 15px;
+}
+main .todoList .itemsLeft {
+  justify-content: space-between;
+  padding: var(--padding);
+  color: var(--TH-2_text1);
+  font-weight: var(--fw-7);
+  font-size: var(--t-fs);
+}
+main .todoList .itemsLeft .left .remaining {
+  margin-right: 0.3rem;
+}
+main .choose {
+  background: var(--TH-2_panel-bg);
+  color: var(--TH-2_text1);
+  font-weight: var(--fw-7);
+  margin-bottom: 3rem;
+}
+main .choose p + p {
+  margin-left: 1rem;
+}
+main .drag {
+  font-size: var(--t-fs);
+  font-weight: var(--fw-7);
+  text-align: center;
+  color: var(--TH-2_text1);
+}
+
+@media screen and (min-width: 400px) {
+  body {
+    --mob-bg-dark: var(--des-bg-dark);
+  }
+
+  .sun {
+    --mob-bg-dark: var(--des-bg-light);
+  }
+}
+.radioChecked:checked:before {
+  background: url(/images/icon-check.svg) no-repeat, linear-gradient(to right, #57ddff, #c058f3);
+  background-position: center, center;
+  z-index: 2;
+}
+.radioChecked:checked + p {
+  color: var(--TH-2_text1) !important;
+}
+.radioChecked:checked + p:before {
+  display: block !important;
+}
+
+.radioChecked1:before {
+  background: url(/images/icon-check.svg) no-repeat, linear-gradient(to right, #57ddff, #c058f3);
+  background-position: center, center;
+  z-index: 2;
+}
+.radioChecked1 + p {
+  color: var(--TH-2_text1) !important;
+}
+.radioChecked1 + p:before {
+  display: block !important;
+}
+
+/*# sourceMappingURL=style.css.map */

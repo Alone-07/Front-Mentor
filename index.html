@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="script.js" defer></script>
+
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <main>
+    <div class="logo_container">
+      <h1 class="logo">Todo</h1>
+      <span class="toggler">
+        <img src="/images/icon-sun.svg" alt="sun" class="sun" data-sun="sun">
+        <img src="/images/icon-moon.svg" alt="moon" class="moon" data-moon='moon'>
+      </span>
+    </div>
+    <label class="input_container">
+      <input type="radio" name="uncheck" id="uncheck" disabled>
+      <input type="text" title="add Todo list" placeholder="Create a new todo...">
+    </label>
+
+    <form class="todoList" data-form="">
+      <div class="itemsLeft" data-leftContainer="">
+        <p class="left">
+          <span class="remaining" data-left="">0</span>items left
+        </p>
+        <p class="clear">Clear Completed</p>
+      </div>
+    </form>
+    <div class="choose">
+      <p class="all">All</p>
+      <p class="active">Active</p>
+      <p class="complete">Completed</p>
+    </div>
+
+    <p class="drag">Drag and drop to reorder list</p>
+  </main>
+
+
+</body>
+
+</html>

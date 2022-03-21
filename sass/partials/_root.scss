@@ -1,0 +1,45 @@
+:root {
+  --Bright_Blue: hsl(220, 98%, 61%);
+  --check-bg: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --block: block;
+  --none: none;
+  --flex: flex;
+  --w: min(400px, 85%);
+  --h-fs: 26px;
+  --t-fs: 14px;
+  --padding: 0.4rem 1rem;
+  //   light Theme:-
+  --TH-1_bg: hsl(0, 0%, 98%);
+  --TH-1_panel-bg: hsl(236, 33%, 92%);
+  --TH-1_panel-text1: hsl(233, 11%, 84%);
+  --TH-1_panel-text: hsl(236, 9%, 61%);
+  --TH-1_li-text: hsl(235, 19%, 35%);
+
+  // dark Theme:-
+  --TH-2_bg: hsl(235, 21%, 11%);
+  --TH-2_panel-bg: hsl(235, 24%, 19%);
+  --TH-2_li-text: hsl(234, 39%, 85%);
+  --TH-2_li-text-hover: hsl(236, 33%, 92%);
+  --TH-2_text1: hsl(233, 14%, 35%);
+  --TH-2_text2: hsl(237, 14%, 26%);
+
+  // font:-
+  --fs: 18px;
+  --ff: "Josefin Sans", sans-serif;
+  --fw-4: 400;
+  --fw-7: 7000;
+  --mob-bg-dark: url(/images/bg-mobile-dark.jpg);
+  --mob-bg-light: url(/images/bg-mobile-light.jpg);
+  --des-bg-dark: url(/images/bg-desktop-dark.jpg);
+  --des-bg-light: url(/images/bg-desktop-light.jpg);
+}
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+.sun {
+  --TH-2_bg: var(--TH-1_bg);
+  --TH-2_panel-bg: var(--TH-1_panel-bg);
+  --TH-2_li-text: var(--TH-1_li-text);
+  --TH-2_text2: var(--TH-1_panel-text);
+  --TH-2_text1: var(--TH-1_panel-text1);
+  --mob-bg-dark: var(--mob-bg-light);
+}
