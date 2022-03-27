@@ -1,5 +1,20 @@
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 375px) {
   body {
     background-image: var(--des-bg-dark);
+  }
+
+  main {
+    .status {
+      &:after {
+        top: 150%;
+      }
+      .stats {
+        position: static;
+        flex: 1;
+        font: {
+          size: clamp(15px, 2vw, 18px);
+        }
+      }
+    }
   }
 }

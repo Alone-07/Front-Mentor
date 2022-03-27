@@ -4,7 +4,7 @@
   --block: block;
   --none: none;
   --flex: flex;
-  --w: min(400px, 90%);
+  --w: min(500px, 90%);
   --h-fs: 32px;
   --t-fs: 14px;
   --padding: 0.9rem 1rem;
@@ -43,6 +43,7 @@
   --TH-2_text2: var(--TH-1_panel-text1);
   --TH-2_text1: var(--TH-1_panel-text);
   --mob-bg-dark: var(--mob-bg-light);
+  --des-bg-dark: var(--des-bg-light);
 }
 
 .block {
