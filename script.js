@@ -1,5 +1,6 @@
 const form = document.querySelector('form');
 const ul = document.querySelector('.listContainer');
+const left = document.querySelector('.left');
 const all = document.querySelector('.all');
 const active = document.querySelector('.active');
 const complete = document.querySelector('.complete');
@@ -105,7 +106,6 @@ function removeTask(task) {
 }
 
 function count() {
-    const left = document.querySelector('.left');
     left.innerText = todos.length.toString();
 }
 
@@ -138,6 +138,7 @@ stats.addEventListener('click', e => {
         complete.forEach(none);
 
         let active = li.filter(list => list.classList.contains('active') == true);
+        left.innerText = active.length.toString();
         // adding color:-
         elem.add('clr');
         return active.forEach(block);
@@ -151,11 +152,13 @@ stats.addEventListener('click', e => {
         let complete = li.filter(list => list.classList.contains('completed') == true);
         // adding color:-
         elem.add('clr');
+        left.innerText = complete.length.toString();
         return complete.forEach(block);
     }
     if (elem.contains('all')) {
         // adding color:-
         elem.add('clr');
+        left.innerText = li.length.toString();
         return li.forEach(block);
     }
 })
