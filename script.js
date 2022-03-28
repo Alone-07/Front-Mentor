@@ -1,10 +1,11 @@
-
-async function Prom() {
-    let promise = new Promise(resolve => {
-        let x = 1;
-        x && setTimeout(_ => resolve('Resolve'), 2000);
-    })
-
-    console.log(await promise);
+const div = document.querySelector('.root');
+const btn = document.querySelector('button');
+function XML() {
+    const hi = new XMLHttpRequest();
+    hi.onload = function () {
+        div.innerHTML = this.responseText;
+    }
+    hi.open('GET', 'http://todo-app-main-007.netlify.app');
+    hi.send();
 }
-Prom();
+btn.addEventListener('click', XML);
