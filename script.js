@@ -5,7 +5,7 @@ function XML() {
     hi.onload = function () {
         div.innerHTML = this.responseText;
     }
-    hi.open('GET', 'http://todo-app-main-007.netlify.app');
+    hi.open('GET', './reference.txt');
     hi.send();
 }
 btn.addEventListener('click', XML);
