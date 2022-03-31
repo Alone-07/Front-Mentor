@@ -5,18 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
-    <title>Promises</title>
+    <title>Simple 10 fast fingers</title>
 </head>
 <style>
     body {
         background: #323437;
+        color: #fff;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        min-height: 100vh;
+        /* color: rgb(164, 231, 164); */
+    }
+
+    div {
+        text-align: center;
+        width: min(550px, 90%);
+    }
+
+
+    .root {
+        text-align: center;
+        padding: 1.5rem;
+        line-height: 1.5;
+        border: 1px solid #eee;
+        margin-bottom: 1rem;
+        letter-spacing: .2rem;
+        color: olivedrab;
+        border-radius: 10px;
+        /* word-spacing: .3rem; */
+    }
+
+    .root>span {
+        /* margin-left: .3rem; */
+        padding: .3rem 0rem;
+        text-align: center;
+    }
+
+    [data-time] {
+        margin-left: 1rem;
+        border: 1px dotted #eee;
+        padding: .5rem;
+        font-size: 18px;
+    }
+
+
+    input {
+        margin-left: .5rem;
     }
 </style>
 
 <body>
-    <button type="button">Click</button>
     <div class="root"></div>
-    <a href="./reference.txt">Link</a>
+    <div>Type here:- <input type="text" name="type" id="type" title="type"> <span data-time="">00</span></div>
 </body>
 
 </html>
