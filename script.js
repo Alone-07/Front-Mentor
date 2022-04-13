@@ -23,7 +23,7 @@ function Type(e) {
     let inputValue = e.target.value;
     inputValue = inputValue.trim();
     // key = " " !!!!!! for space
-    if (e.keyCode = 32) {
+    if (e.keyCode == 32) {
         wordChecker(inputValue);
         return e.target.value = '';
     }
