@@ -22,8 +22,8 @@ border(count);
 function Type(e) {
     let inputValue = e.target.value;
     inputValue = inputValue.trim();
-    // keyCode = 32 !!!!!! for space
-    if (e.key == " ") {
+    // key = " " !!!!!! for space
+    if (e.keyCode = 32) {
         wordChecker(inputValue);
         return e.target.value = '';
     }
