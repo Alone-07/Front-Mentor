@@ -1,0 +1,22 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --Light_Grey: hsl(217, 12%, 63%);
+  --Medium_Grey: hsl(216, 12%, 54%);
+  --Dark_Blue: hsl(213, 19%, 18%);
+  --Very_Dark_Blue: hsl(216, 12%, 8%);
+  --fs-p: 15px;
+  --fw-4: 400;
+  --fw-7: 700;
+  --ff: "Overpass", sans-serif;
+  --block: block;
+  --none: none;
+  --flex: flex;
+}
+.none {
+  --block: var(--none);
+}
+.block {
+  --none: var(--block);
+}
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");

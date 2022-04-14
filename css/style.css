@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --Light_Grey: hsl(217, 12%, 63%);
+  --Medium_Grey: hsl(216, 12%, 54%);
+  --Dark_Blue: hsl(213, 19%, 18%);
+  --Very_Dark_Blue: hsl(216, 12%, 8%);
+  --fs-p: 15px;
+  --fw-4: 400;
+  --fw-7: 700;
+  --ff: "Overpass", sans-serif;
+  --block: block;
+  --none: none;
+  --flex: flex;
+}
+
+.none {
+  --block: var(--none);
+}
+
+.block {
+  --none: var(--block);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+}
+
+span,
+input {
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.flex, main .thank .img, main .thank, main .Rating .rating, main .thank .rating, main .Rating .star, main .thank .star, main .Rating .rating .num, main .thank .rating .num, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--ff);
+  background-color: var(--Very_Dark_Blue);
+}
+
+.head {
+  color: var(--white);
+  font-weight: var(--fw-4);
+}
+
+.txt {
+  color: var(--Medium_Grey);
+  font-weight: var(--fw-4);
+  font-size: var(--fs-p);
+  line-height: 1.5;
+}
+
+.selected {
+  border-radius: 100px;
+  color: var(--orange);
+  font-size: var(--fs-p);
+  font-weight: var(--fw-4);
+  margin: 1.5rem auto;
+  background: var(--Dark_Blue);
+  box-shadow: 0px 0px 2rem 0.4rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0.7rem;
+  opacity: 0.8;
+}
+
+.current {
+  color: var(--white) !important;
+  background: var(--Light_Grey) !important;
+}
+
+main {
+  width: min(400px, 90%);
+  margin: 0 auto;
+}
+main .Rating, main .thank {
+  display: var(--block);
+  padding: 1.5rem;
+  background: linear-gradient(to right bottom, var(--Dark_Blue) 55%, var(--Very_Dark_Blue));
+  border-radius: 15px;
+}
+main .Rating .star, main .thank .star, main .Rating .rating .num, main .thank .rating .num {
+  width: 45px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--Dark_Blue);
+  padding: 0.7rem;
+  box-shadow: 0px 0px 2rem 0.4rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  transition: 0.3s ease;
+}
+main .Rating .star:hover, main .thank .star:hover, main .Rating .rating .num:hover, main .thank .rating .num:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+main .Rating .rating, main .thank .rating {
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+main .Rating .rating .num, main .thank .rating .num {
+  color: var(--Light_Grey);
+}
+main .Rating button[type=submit], main .thank button[type=submit] {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: var(--fw-7);
+  color: var(--white);
+  background-color: var(--orange);
+  transition: 0.3s ease;
+}
+main .Rating button[type=submit]:hover, main .thank button[type=submit]:hover {
+  background: var(--white);
+  color: var(--orange);
+}
+main .thank {
+  flex-flow: column;
+  display: var(--none);
+  animation: fade 0.7s normal;
+}
+main .thank h2,
+main .thank p {
+  text-align: center;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  100% {
+    opacity: 1;
+    transition: 0.3s ease;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
